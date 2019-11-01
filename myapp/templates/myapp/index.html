@@ -1,0 +1,1907 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+<meta name="google-site-verification" content="EnTdCbZykhunZ4xL60GxfI98s9uExcOqNDMW86GVG7g"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carpet Cleaning | Steam Cleaning - Drymaster Carpet Cleaning</title>
+    <meta name="description" content="Are you looking for the very best carpet & upholstery cleaning in Melbourne to deliver outstanding results? Contact Drymaster Carpet Cleaning for a professional services."/>
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'myapp/images/favicon.png' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/animations.css' %}">
+    <!-- <link rel="stylesheet" type="text/css" href="css/animations.css"> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/bootstrap.css' %}">
+    <!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/revolution-slider.css' %}">
+    <!-- <link href="css/revolution-slider.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/animations.css' %}">
+    <!-- <link rel="stylesheet" type="text/css" href="css/animations.css"> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/style.css' %}">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/responsive.css' %}">
+    <!-- <link href="css/responsive.css" rel="stylesheet"> -->
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+   
+
+    <!-- Call Now -->
+        <style>
+           #callnowbutton {display:none;} @media screen and (max-width:650px){#callnowbutton {display:block; position:fixed; text-decoration:none; z-index:2147483647;width:100%;left:0;bottom:0;height:60px;border-top:1px solid #2dc62d; border-bottom:1px solid #006700;text-shadow: 0 1px #006700; text-align:center;color:#fff; font-weight:600; font-size:190%;  overflow: hidden;padding-right:20px;background:#009900;display: flex; justify-content: center; align-items: center;}body {padding-bottom:60px;}}
+        </style>
+        <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
+        </style>
+        <style type='text/css'>
+        .site-title a,.site-title a:visited{color:ffffff;}
+        </style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5WLQRZD');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+    <!-- Preloader -->
+    <!-- <div class="preloader"></div> -->
+    <!-- Main Header / Style Three-->
+    <header class="main-header header-style-three bg-top page-top">
+        <!--Header-Lower-->
+        <div class="header-lower">
+            <div class="container">
+                <div class="nav-outer clearfix">
+                    <!--Logo-->
+                    <div class="logo">
+                        <a href="{% url 'index' %}"><img class="img-responsive" src="{% static 'myapp/images/logo.png' %}" alt="Dry Master Carpet Cleaning"></a>
+                    </div>
+                    <!-- <div class="col-md-8">
+                            {% if messages %}
+                              {% for message in messages %}
+                                <div class="alert alert-{{ message.tags }}">
+                                  {{ message }}
+                                </div>
+                              {% endfor %}
+                            {% endif %}
+                    </div> -->
+                    <nav class="main-menu">
+                        <div class="navbar-header">    
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+                                <li><a href="{% url 'index' %}">Home</a></li>
+                                <li class="dropdown"><a href="{% url 'about' %}">About Us</a>
+                                    <ul>
+                                        <li><a href="{% url 'faq' %}">FAQ</a></li>
+                                        <li><a href="{% url 'privacy_policy' %}">Privacy Policy</a>
+                                        </li>
+                                        <li><a href="{% url 'terms_and_conditions' %}">Terms & Conditions</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Service</a>
+                                    <ul>
+                                        <li><a href="{% url 'carpet_steam_cleaning' %}">Carpet Steam Cleaning</a></li>
+                                        <li><a href="{% url 'carpet_dry_clean' %}">Carpet Dry Cleaning</a></li>
+                                        <li><a href="{% url 'rug_cleaning' %}">Rug Cleaning</a></li>
+                                        <li class="dropdown"><a href="#">Upholstery</a>
+                                            <ul>
+                                                <li><a href="{% url 'leather_sofa_leaning' %}" >Leather Sofa Cleaning</a></li>
+                                                <li><a href="{% url 'leather_sofa_leaning' %}">Leather Sofa Cleaning</a></li>
+                                                <li><a href="{% url 'fabric_sofa_cleaning' %}" >Fabric Sofa Cleaning</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'water_damage' %}" >Water Damage</a></li>
+                                        <li><a href="{% url 'tile_and_grout_cleaning' %}">Tile &#038; Grout</a></li>
+                                        <li class="dropdown"><a href="#">Stains &#038; Spots</a>
+                                            <ul>
+                                                <li><a href="{% url 'anti_allergen_cleaning' %}">Anti Allergen Cleaning</a></li>
+                                                <li><a href="{% url 'filtration_soiling' %}"  >Filtration Soiling</a></li>
+                                                <li><a href="{% url 'pet_stains_treatments' %}">Pet Stains &#038; Treatments</a></li>
+                                                <li><a href="{% url 'heavy_soiled_carpets' %}"  >Heavy Soiled Carpets</a></li>
+                                                <li><a href="{% url 'cleaning_agents' %}">Cleaning Agents</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'mattress_cleaning' %}">Mattress</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Service Location</a>
+                                    <ul>
+                                        <li class="dropdown"><a href="{% url 'newcastle' %}">Newcastle</a>
+                                            <ul>
+                                                <li><a href="{% url 'carpet_cleaning_newcastle' %}">Carpet Cleaning Newcastle</a></li>
+                                                <li><a href="{% url 'mattress_cleaning_newcastle' %}">Mattress Cleaning Newcastle</a></li>
+                                                <li><a href="{% url 'rug_cleaning_newcastle' %}">Rug Cleaning Newcastle</a></li>
+                                                <li><a href="{% url 'water_damage_newcastle' %}">Water Damage Newcastle</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown"><a href="{% url 'goldcoast' %}">Gold Coast</a>
+                                            <ul>
+                                               
+                                                <li><a href="{% url 'rug_cleaning_gold_coast' %}">Rug Cleaning Gold Coast</a></li>
+                                                <li><a href="{% url 'sofa_cleaning_gold_coast' %}">Sofa Cleaning Gold Coast</a></li>
+                                                <li><a href="{% url 'mattress_cleaning_gold_coast' %}">Mattress Cleaning Gold Coast</a></li>
+                                                <li><a href="{% url 'water_damage_gold_coast' %}">Water Damage Gold Coast</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="{% url 'wollongong' %}">Wollongong</a>
+                                            <ul>
+                                                <li><a href="{% url 'carpet_cleaning_wollongong' %}">Carpet Cleaning Wollongong</a></li>
+                                                <li><a href="{% url 'mattress_cleaning_wollongong' %}">Mattress Cleaning Wollongong</a></li>
+                                                <li><a href="{% url 'rug_cleaning_wollongong' %}">Rug Cleaning Wollongong</a></li>
+                                                <li><a href="{% url 'water_damage_wollongong' %}">Water Damage Wollongong</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="{% url 'canberra' %}">Canberra</a>
+                                            <ul>
+                                                <li><a href="{% url 'carpet_cleaning_canberra' %}">Carpet Cleaning Canberra</a></li>
+                                                <li><a href="{% url 'mattress_cleaning_canberra' %}">Mattress Cleaning Canberra</a></li>
+                                                <li><a href="{% url 'rug_cleaning_canberra' %}">Rug Cleaning Canberra</a></li>
+                                                <li><a href="{% url 'water_damage_canberra' %}">Water Damage Canberra</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown"><a href="{% url 'sydney' %}">Sydney</a>
+                                            <ul>
+                                                <li><a href="{% url 'carpet_cleaning_sydney' %}">Carpet Cleaning Sydney</a></li>
+                                                <li><a href="{% url 'mattress_cleaning_sydney' %}">Mattress Cleaning Sydney</a></li>
+                                                <li><a href="{% url 'rug_cleaning_sydney' %}">Rug Cleaning Sydney</a></li>
+                                                <li><a href="{% url 'water_damage_sydney' %}">Water Damage Sydney</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li><a href="{% url 'perth' %}">Perth</a></li>
+
+                                        <li class="dropdown"><a href="{% url 'melbourne' %}">Melbourne</a>
+                                            <ul>
+                                                <li><a href="{% url 'carpet_cleaning_melbourne' %}">Carpet Cleaning Melbourne</a></li>
+                                                <li><a href="{% url 'upholstery_cleaning_melbourne' %}">Upholstery Cleaning Melbourne</a></li>
+                                                <li><a href="{% url 'mattress_cleaning_melbourne' %}">Mattress Cleaning Melbourne</a></li>
+                                                <li><a href="{% url 'rug_cleaning_melbourne' %}">Rug Cleaning Melbourne</a></li>
+                                                <li><a href="{% url 'water_damage_melbourne' %}">Water Damage Melbourne</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown"><a href="{% url 'brisbane' %}">Brisbane</a>
+                                            <ul>
+                                                <li><a href="{% url 'carpet_cleaning_brisbane' %}">Carpet Cleaning Brisbane</a></li>
+                                                <li><a href="{% url 'mattress_cleaning_brisbane' %}">Mattress Cleaning Brisbane</a></li>
+                                                <li><a href="{% url 'sofa_cleaning_brisbane' %}">Sofa Cleaning Brisbane</a></li>
+                                                <li><a href="{% url 'rug_cleaning_brisbane' %}">Rug Cleaning Brisbane</a></li>
+                                                <li><a href="{% url 'water_damage_brisbane' %}">Water Damage Brisbane</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown"><a href="{% url 'adelaide' %}">Adelaide</a>
+                                            <ul>
+                                                <li><a href="{% url 'carpet_cleaning_adelaide' %}">Carpet Cleaning Adelaide</a></li>
+                                                <li><a href="{% url 'mattress_cleaning_adelaide' %}">Mattress Cleaning Adelaide</a></li>
+                                                <li><a href="{% url 'rug_cleaning_adelaide' %}">Rug Cleaning Adelaide</a></li>
+                                                <li><a href="{% url 'water_damage_adelaide' %}">Water Damage Adelaide</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="{% url 'accreditations' %}">Accreditations</a></li>
+                                <li><a href="{% url 'home' %}">Instant Quote</a></li>
+                                <li><a href="#exampleModal" data-toggle="modal" data-target="#exampleModal">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="shop-box">
+                        <a href="https://www.facebook.com/pages/Drymaster-Carpet-Cleaning/561031333936630" target="_blank"><i class="fa fa-facebook-f ab14"></i></a>
+                        <a href="https://twitter.com/drymastercc" target="_blank"><i class="fa fa-twitter ab14"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Bounce In Header-->
+        <div class="bounce-in-header hidden-xs">
+            <div class="container clearfix">
+                <div class="logo pull-left">
+                    <a href="{% url 'index' %}" class="img-responsive"><img src="{% static 'myapp/images/logo.png' %}" alt="All Bright Carpet & Upholstery Cleaning Specialists"></a>
+                </div>
+                <div class="pull-right">
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+                        <div class="navbar-header">
+                            <!-- Toggle Button -->      
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation clearfix">
+                                <li class="current dropdown"><a href="index.html">Home</a></li>
+                                <li class="dropdown"><a href="{% url 'about' %}">About Us</a>
+                                    <ul>
+                                        <li><a href="{% url 'faq' %}">FAQ</a></li>
+                                        <li><a href="{% url 'privacy_policy' %}">Privacy Policy</a>
+                                        </li>
+                                        <li><a href="{% url 'terms_and_conditions' %}">Terms & Conditions</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+
+                                <li class="dropdown"><a href="#">Service</a>
+                                    <ul>
+                                        <li><a href="{% url 'carpet_steam_cleaning' %}">Carpet Steam Cleaning</a></li>
+                                        <li><a href="{% url 'carpet_dry_cleanl' 5}">Carpet Dry Cleaning</a></li>
+                                        <li><a href="{% url 'rug_cleaning' %}">Rug Cleaning</a></li>
+                                        <li class="dropdown"><a href="#">Upholstery</a>
+                                            <ul>
+                                                <li><a href="{% url 'leather_sofa_leaning' %}">Leather Sofa Cleaning</a></li>
+                                                <li><a href="{% url 'fabric_sofa_cleaning' %}">Fabric Sofa Cleaning</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'water_damage' %}">Water Damage</a></li>
+                                        <li><a href="{% url 'tile_and_grout_cleaning' %}">Tile &#038; Grout</a></li>
+                                        <li class="dropdown"><a href="#">Stains &#038; Spots</a>
+                                            <ul>
+                                                <li><a href="{% url 'anti_allergen_cleaning' %}">Anti Allergen Cleaning</a></li>
+                                                <li><a href="{% url 'filtration_soiling' %}">Filtration Soiling</a></li>
+                                                <li><a href="{% url 'pet_stains_treatments' %}">Pet Stains &#038; Treatments</a></li>
+                                                <li><a href="{% url 'heavy_soiled_carpets' %}">Heavy Soiled Carpets</a></li>
+                                                <li><a href="{% url 'cleaning_agents' %}">Cleaning Agents</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'mattress_cleaning' %}">Mattress</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Service Location</a>
+                                    <ul>
+                                        <li class="dropdown"><a href="{% url 'newcastle' %}">Newcastle</a>
+                                            <ul>
+                                                <li><a href="{% url 'carpet_cleaning_newcastle' %}">Carpet Cleaning Newcastle</a></li>
+                                                <li><a href="{% url 'mattress_cleaning_newcastle' %}">Mattress Cleaning Newcastle</a></li>
+                                                <li><a href="{% url 'rug_cleaning_newcastle' %}">Rug Cleaning Newcastle</a></li>
+                                                <li><a href="{% url 'water_damage_newcastle' %}">Water Damage Newcastle</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown"><a href="{% url 'goldcoast' %}">Gold Coast</a>
+                                            <ul>
+                                                <li><a href="{% url 'tile_cleaning_gold_coast' %}">Professional Tile Cleaning Gold Coast</a></li>
+                                                <li><a href="{% url 'rug_cleaning_gold_coast' %}">Rug Cleaning Gold Coast</a></li>
+                                                <li><a href="{% url 'sofa_cleaning_gold_coast' %}">Sofa Cleaning Gold Coast</a></li>
+                                                <li><a href="{% url 'mattress_cleaning_gold_coast' %}">Mattress Cleaning Gold Coast</a></li>
+                                                <li><a href="{% url 'water_damage_gold_coast' %}">Water Damage Gold Coast</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown"><a href="{% url 'wollongong' %}">Wollongong</a>
+                                            <ul>
+                                                <li><a href="{% url 'carpet_cleaning_wollongong' %}">Carpet Cleaning Wollongong</a></li>
+                                                <li><a href="{% url 'mattress_cleaning_wollongong' %}">Mattress Cleaning Wollongong</a></li>
+                                                <li><a href="{% url 'rug_cleaning_wollongong' %}">Rug Cleaning Wollongong</a></li>
+                                                <li><a href="{% url 'water_damage_wollongong' %}">Water Damage Wollongong</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown"><a href="{% url 'canberra' %}">Canberra</a>
+                                            <ul>
+                                                <li><a href="{% url 'carpet_cleaning_canberra' %}">Carpet Cleaning Canberra</a></li>
+                                                <li><a href="{% url 'mattress_cleaning_canberra' %}">Mattress Cleaning Canberra</a></li>
+                                                <li><a href="{% url 'rug_cleaning_canberra' %}">Rug Cleaning Canberra</a></li>
+                                                <li><a href="{% url 'water_damage_canberra' %}">Water Damage Canberra</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown"><a href="{% url 'sydney' %}">Sydney</a>
+                                            <ul>
+                                                <li><a href="{% url 'carpet_cleaning_sydney' %}">Carpet Cleaning Sydney</a></li>
+                                                <li><a href="{% url 'mattress_cleaning_sydney' %}">Mattress Cleaning Sydney</a></li>
+                                                <li><a href="{% url 'rug_cleaning_sydney' %}">Rug Cleaning Sydney</a></li>
+                                                <li><a href="{% url 'water_damage_sydney' %}">Water Damage Sydney</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li><a href="{% url 'perth' %}">Perth</a></li>
+
+                                        <li class="dropdown"><a href="{% url 'melbourne' %}">Melbourne</a>
+                                            <ul>
+                                                <li><a href="{% url 'carpet_cleaning_melbourne' %}">Carpet Cleaning Melbourne</a></li>
+                                                <li><a href="{% url 'upholstery_cleaning_melbourne' %}">Upholstery Cleaning Melbourne</a></li>
+                                                <li><a href="{% url 'mattress_cleaning_melbourne' %}">Mattress Cleaning Melbourne</a></li>
+                                                <li><a href="{% url 'rug_cleaning_melbourne' %}">Rug Cleaning Melbourne</a></li>
+                                                <li><a href="{% url 'water_damage_melbourne' %}">Water Damage Melbourne</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown"><a href="{% url 'brisbane' %}">Brisbane</a>
+                                            <ul>
+                                                <li><a href="{% url 'carpet_cleaning_brisbane' %}">Carpet Cleaning Brisbane</a></li>
+                                                <li><a href="{% url 'mattress_cleaning_brisbane' %}">Mattress Cleaning Brisbane</a></li>
+                                                <li><a href="{% url 'sofa_cleaning_brisbane' %}">Sofa Cleaning Brisbane</a></li>
+                                                <li><a href="{% url 'rug_cleaning_brisbane' %}">Rug Cleaning Brisbane</a></li>
+                                                <li><a href="{% url 'water_damage_brisbane' %}">Water Damage Brisbane</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown"><a href="{% url 'adelaide' %}">Adelaide</a>
+                                            <ul>
+                                                <li><a href="{% url 'carpet_cleaning_adelaide' %}">Carpet Cleaning Adelaide</a></li>
+                                                <li><a href="{% url 'mattress_cleaning_adelaide' %}">Mattress Cleaning Adelaide</a></li>
+                                                <li><a href="{% url 'rug_cleaning_adelaide' %}">Rug Cleaning Adelaide</a></li>
+                                                <li><a href="{% url 'water_damage_adelaide' %}">Water Damage Adelaide</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li><a href="{% url 'accreditations' %}">Accreditations</a></li>
+                                <li><a href="{% url 'inde' %}">Instant Quote</a></li>
+                                <li><a data-toggle="modal" data-target="#exampleModal" href="#exampleModal">Contact Us</a></li><li>
+                                    <div class="shop-box ab15">
+                                        <a href="https://www.facebook.com/pages/Drymaster-Carpet-Cleaning/561031333936630" target="_blank">
+                                            <i class="fa fa-facebook-f ab14"></i>
+                                        </a>
+                                        <a href="https://twitter.com/drymastercc" target="_blank">
+                                            <i class="fa fa-twitter ab14"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+  
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- <div class="container-fluid"> -->
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <img src="drymaster/modal.jpg" alt="">
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="modal-header text-center">
+                                <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true" style="color: #ff002d; font-size: 32px;">&times;</span>
+                                    </button>
+                            </div>
+                            <div class="modal-body mx-3">
+                                    <h2>Contact Us</h2>
+                                    <form method="post">
+                                        {% csrf_token %}
+                                        {{ post_form.as_p }}
+                                        <input type="submit" value="Submit" />
+                                    </form>
+                                <!-- <div class="md-form mb-5">
+                                    <input type="text" id="form34" placeholder="Please Enter Your Name:" class="form-control validate">
+                                </div>
+                                <div class="md-form mb-5">
+                                    <input type="email" id="form29" class="form-control validate" placeholder="Please Enter Your Email Id:">
+                                </div>
+                                <div class="md-form mb-5">
+                                    <input type="email" id="form29" class="form-control validate" placeholder="Please Enter Your Phone No:">
+                                </div>
+                                <div class="md-form mb-5">
+                                    <input type="text" id="form32" class="form-control validate" placeholder="Suburb/Location:">
+                                </div>
+                                <div class="md-form">
+                                    <textarea type="text" id="form8" class="md-textarea form-control" rows="4" placeholder="Your message"></textarea>
+                                </div> -->
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center">
+                                <button type="button" class="btn mymd-btn" data-dismiss="modal">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!--Main Slider-->
+    <section class="main-slider default-style style-one">
+        <div class="tp-banner-container">
+          <div class="tp-banner">
+            <ul>
+              <li data-transition="curtain-1" class="" data-slotamount="1" data-masterspeed="1000" data-thumb="images/slider/2.jpg"  data-saveperformance="off"  data-title="Awesome Title Here">
+                <img src="{% static 'myapp/drymaster/1.png' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                <div class="tp-caption sfb sfb tp-resizeme"
+                    data-x="555"
+                    data-y="center"
+                    data-hoffset="0"
+                    data-voffset="-110"
+                    data-speed="1500"
+                    data-start="1000"
+                    data-easing="easeOutBounce"
+                    data-splitin="none"
+                    data-splitout="none"
+                    data-elementdelay="0.01"
+                    data-endelementdelay="0.3"
+                    data-endspeed="1200"
+                    data-endeasing="Power4.easeIn">
+                  <h6 class="sub-title-1 ab29">YOUR LOCAL STEAM CLEANING SPECIALIST</h6>
+                </div>
+                <div class="tp-caption sfb sfb tp-resizeme"
+                    data-x="550"
+                    data-y="190"
+                    data-hoffset="250"
+                    data-voffset="0"
+                    data-speed="1500"
+                    data-start="1000"
+                    data-easing="easeInOutQuart"
+                    data-splitin="none"
+                    data-splitout="none"
+                    data-elementdelay="0.01"
+                    data-endelementdelay="0.3"
+                    data-endspeed="1200"
+                    data-endeasing="Power4.easeOut">
+                  <h2 class="main-title-1 ab29">CONTACT US NOW FOR <br>A <span>NO OBLIGATION QUOTE</span></h2>
+                </div>
+                <div class="tp-caption sfb sfb tp-resizeme"
+                    data-x="560"
+                    data-y="320"
+                    data-hoffset="0"
+                    data-voffset="150"
+                    data-speed="1500"
+                    data-start="2000"
+                    data-easing="easeOutExpo"
+                    data-splitin="none"
+                    data-splitout="none"
+                    data-elementdelay="0.01"
+                    data-endelementdelay="0.3"
+                    data-endspeed="1200"
+                    data-endeasing="Power4.easeIn"><a href="tel:1300662188" class="btn slider-btn-2 ab29">Call Now</a></div>
+                </li>
+                <li data-transition="curtain-2" data-slotamount="1" data-masterspeed="1000" data-thumb="images/slider/1.jpg"  data-saveperformance="off"  data-title="Awesome Title Here"> <img src="{% static 'myapp/images/slider/img_020.png' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+                    <div class="tp-caption sfb sfb tp-resizeme"
+                        data-x="555"
+                        data-y="center"
+                        data-hoffset="0"
+                        data-voffset="-110"
+                        data-speed="1500"
+                        data-start="1000"
+                        data-easing="easeOutBounce"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.01"
+                        data-endelementdelay="0.3"
+                        data-endspeed="1200"
+                        data-endeasing="Power4.easeIn">
+                    <h6 class="sub-title ab29">YOUR LOCAL STEAM CLEANING SPECIALIST</h6>
+                    </div>
+                <div class="tp-caption sfb sfb tp-resizeme"
+                        data-x="550"
+                        data-y="190"
+                        data-hoffset="250"
+                        data-voffset="0"
+                        data-speed="1500"
+                        data-start="1000"
+                        data-easing="easeInOutQuart"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.01"
+                        data-endelementdelay="0.3"
+                        data-endspeed="1200"
+                        data-endeasing="Power4.easeOut">
+                    <h2 class="main-title ab29">CONTACT US NOW FOR <br>A <span>NO OBLIGATION QUOTE</span></h2>
+                    </div>
+                    <div class="tp-caption sfb sfb tp-resizeme"
+                        data-x="560"
+                        data-y="320"
+                        data-hoffset="0"
+                        data-voffset="150"
+                        data-speed="1500"
+                        data-start="2000"
+                        data-easing="easeOutExpo"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.01"
+                        data-endelementdelay="0.3"
+                        data-endspeed="1200"
+                        data-endeasing="Power4.easeIn"><a href="tel:1300662188" class="btn slider-btn ab29">Call Now</a></div>
+                </li>
+                <li data-transition="slideleft" data-slotamount="1" data-masterspeed="2000" data-thumb="images/slider/3.jpg"  data-saveperformance="off"  data-title="Awesome Title Here"> <img src="images/slider/img_030.png"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+                <div class="tp-caption sfb sfb tp-resizeme"
+                        data-x="center"
+                        data-y="center"
+                        data-hoffset="0"
+                        data-voffset="0"
+                        data-speed="1500"
+                        data-start="1000"
+                        data-easing="easeOutBounce"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.01"
+                        data-endelementdelay="0.3"
+                        data-endspeed="1200"
+                        data-endeasing="Power4.easeIn">
+                  <h2 class="bg-color"></h2>
+                </div>
+                <div class="tp-caption sfb sfb tp-resizeme"
+                        data-x="center"
+                        data-y="center"
+                        data-hoffset="0"
+                        data-voffset="-65"
+                        data-speed="1500"
+                        data-start="1000"
+                        data-easing="easeInOutQuart"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.01"
+                        data-endelementdelay="0.3"
+                        data-endspeed="1200"
+                        data-endeasing="Power4.easeOut">
+                  <h2 class="slider-title-3">YOUR <span>LOCAL STEAM</span></h2>
+                </div>
+                <div class="tp-caption sfb sfb tp-resizeme"
+                        data-x="center"
+                        data-y="center"
+                        data-hoffset="0"
+                        data-voffset="-15"
+                        data-speed="1500"
+                        data-start="1000"
+                        data-easing="easeInOutQuart"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.01"
+                        data-endelementdelay="0.3"
+                        data-endspeed="1200"
+                        data-endeasing="Power4.easeOut">
+                  <h2 class="slider-title-4"> <span>CLEANING </span>SPECIALIST</h2>
+                </div>
+                <div class="tp-caption sfb sfb tp-resizeme"
+                        data-x="center"
+                        data-y="center"
+                        data-hoffset="0"
+                        data-voffset="50"
+                        data-speed="1500"
+                        data-start="1000"
+                        data-easing="easeInOutQuart"
+                        data-splitin="none"
+                        data-splitout="none"
+                        data-elementdelay="0.01"
+                        data-endelementdelay="0.3"
+                        data-endspeed="1200"
+                        data-endeasing="Power4.easeOut">
+                    <div class="slider-icon">
+                        <ul class="list-inline">
+                            <li><span class="flaticon-window"></span></li>
+                            <li><span class="flaticon-towel"></span></li>
+                            <li><span class="flaticon-bucket"></span></li>
+                            <li><span class="flaticon-vacuum-cleaner"></span></li>
+                        </ul>
+                    </div>
+                </div>
+              </li>
+            </ul>
+            <div class="tp-bannertimer"></div>
+          </div>
+        </div>
+    </section>
+    <!-- My Section  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 style="letter-spacing: 1px;" class="ab9" style="color: #0083ff;">Drymaster  Carpet Cleaning
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row ab6">
+            <div class="col-lg-7">
+                <p class="ab5" style="font-size: 19px; text-align: justify;" >
+                    The business was started as a 1 van operation supplying carpet cleaning services to the North Shore area of Sydney.
+                    Drymaster provides its customers with a simple formula “Your choice of Dry or Steam”. Most carpet cleaning companies only offer one choice, steam cleaning or dry cleaning. Drymaster has a competitive edge because we offer the customer a choice of either dry or steam. Our valued technicians are all owner operators who take pride in serving our valued customers since 1989.
+                </p>
+                <p style="font-size: 19px; text-align: justify;">
+                    Drymaster expanded its operations to Sydney, Melbourne, Brisbane, Adelaide, Perth, Gold Coast, Newcastle, Central Coast, Wollongong and Canberra.
+                </p>
+            </div>
+            <div class="col-lg-5 ab13">
+                <video class="sm-rs video" controls poster="{% static 'myapp/drymaster/30.jpg' %}">
+                    <iframe width="100%" height="310" src="https://www.youtube.com/embed/xSD0j5o1A0E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="insane5">
+                    Drymaster took on its first employees and expanded its operations to cover all of the Sydney Metropolitan area..
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section class="cs-offer-area">
+        <div class="container">
+            <div class="section-wrap">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 cs-fullwd animatedParent animateOnce">
+                        <div class="cs-offer-col animated bounceInUp slow delay-250">
+                            <div class="cs-single-item">
+                                <img class="cs-item-img" src="{% static 'myapp/drymaster/01.jpg' %}" alt="">
+                                <div class="cs-item-text-box">
+                                    <a class="btn btn-default cs-my-btn" href="#" role="button">View Details</a>
+                                    <h5><a href="#">Rug Cleaning</a></h5>
+                                    <p>Special heated cleaning solutions to loosen embedded dirt.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 cs-fullwd animatedParent animateOnce">
+                        <div class="cs-offer-col animated bounceInUp slow delay-500">
+                           <div class="cs-single-item">
+                                <img class="cs-item-img" src="{% static 'myapp/drymaster/02.jpg' %}" alt="">
+                                <div class="cs-item-text-box">
+                                    <a class="btn btn-default cs-my-btn" href="#" role="button">View Details</a>
+                                    <h5><a href="#">Tile & Grout Cleaning</a></h5>
+                                    <p>Special heated cleaning solutions to loosen embedded dirt.</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 cs-fullwd animatedParent animateOnce">
+                        <div class="cs-offer-col animated bounceInUp slow delay-750">
+                            <div class="cs-single-item">
+                                <img class="cs-item-img" src="{% static 'myapp/drymaster/03.jpg' %}" alt="images/offer/03.jpg">
+                                <div class="cs-item-text-box">
+                                    <a class="btn btn-default cs-my-btn" href="#" role="button">View Details</a>
+                                    <h5><a href="#">Mattress Cleaning</a></h5>
+                                    <p>Special heated cleaning solutions to loosen embedded dirt.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 cs-fullwd animatedParent animateOnce">
+                        <div class="cs-offer-col animated bounceInUp slow delay-250">
+                            <div class="cs-single-item">
+                                <img class="cs-item-img" src="{% static 'myapp/drymaster/04.jpg' %}" alt="images/offer/01.jpg">
+                                <div class="cs-item-text-box">
+                                    <a class="btn btn-default cs-my-btn" href="#" role="button">View Details</a>
+                                    <h5><a href="#">Pet Stains & Treatments</a></h5>
+                                    <p>Special heated cleaning solutions to loosen embedded dirt.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 cs-fullwd animatedParent animateOnce">
+                        <div class="cs-offer-col animated bounceInUp slow delay-500">
+                           <div class="cs-single-item">
+                                <img class="cs-item-img" src="{% static 'myapp/drymaster/05.jpg' %}" alt="images/offer/02.jpg">
+                                <div class="cs-item-text-box">
+                                    <a class="btn btn-default cs-my-btn" href="#" role="button">View Details</a>
+                                    <h5><a href="#">Sofa Cleaning</a></h5>
+                                    <p>Special heated cleaning solutions to loosen embedded dirt.</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 cs-fullwd animatedParent animateOnce">
+                        <div class="cs-offer-col animated bounceInUp slow delay-750">
+                            <div class="cs-single-item">
+                                <img class="cs-item-img" src="{% static 'myapp/drymaster/06.jpg' %}" alt="">
+                                <div class="cs-item-text-box">
+                                    <a class="btn btn-default cs-my-btn" href="#" role="button">View Details</a>
+                                    <h5><a href="#">Carpet Steam Cleaning</a></h5>
+                                    <p>Special heated cleaning solutions to loosen embedded dirt.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 cs-fullwd animatedParent animateOnce">
+                        <div class="cs-offer-col animated bounceInUp slow delay-250">
+                            <div class="cs-single-item">
+                                <img class="cs-item-img" src="{% static 'myapp/drymaster/07.jpg' %}" alt="">
+                                <div class="cs-item-text-box">
+                                    <a class="btn btn-default cs-my-btn" href="#" role="button">View Details</a>
+                                    <h5><a href="#">Wet Carpet Restoration</a></h5>
+                                    <p>Special heated cleaning solutions to loosen embedded dirt.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 cs-fullwd animatedParent animateOnce">
+                        <div class="cs-offer-col animated bounceInUp slow delay-500">
+                           <div class="cs-single-item">
+                                <img class="cs-item-img" src="{% static 'myapp/drymaster/08.jpg' %}" alt="">
+                                <div class="cs-item-text-box">
+                                    <a class="btn btn-default cs-my-btn" href="#" role="button">View Details</a>
+                                    <h5><a href="#">Anti Allergen Cleaning</a></h5>
+                                    <p>Special heated cleaning solutions to loosen embedded dirt.</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 cs-fullwd animatedParent animateOnce">
+                        <div class="cs-offer-col animated bounceInUp slow delay-750">
+                            <div class="cs-single-item">
+                                <img class="cs-item-img" src="{% static 'myapp/drymaster/09.jpg' %}" alt="images/offer/03.jpg">
+                                <div class="cs-item-text-box">
+                                    <a class="btn btn-default cs-my-btn" href="#" role="button">View Details</a>
+                                    <h5><a href="#">Carpet Dry Clean</a></h5>
+                                    <p>Special heated cleaning solutions to loosen embedded dirt.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Under Slider  End -->
+
+    <!-- Faq Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="insane3" style="color: #0083ff;">Cleaning FAQ</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row insane">
+            <div class="col-lg-6">
+                <div class="faq-items">
+                    <ul class="faq-group">
+                        <li>
+                            <a class="trigger fuck-mate" href="#0" style="font-size: 20px;">
+                                 
+                                <i class="fa fa-sort-down insane6"></i>
+                                Who Are Drymaster?
+                            </a>
+                            <div class="faq-content">
+                                <p>
+                                    Established in 1989 Drymaster has operations in Sydney, Melbourne, Adelaide, Perth, Brisbane, Gold Coast, Newcastle, Central Coast, Wollongong and Canberra.
+                                    <br><br>We are an Australian owned family business with a network of owner operators throughout Australia.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="trigger fuck-mate" style="font-size: 20px;" href="#0">
+                                
+                                <i class="fa fa-sort-down insane6"></i>
+                                What Services Do You Guys Offer?
+                            </a>
+                            
+                            <div class="faq-content">
+                                <p>
+                                    Drymaster have been Steam cleaning and Dry cleaning carpets since 1990.. We can also offer you fabric and leather sofa cleaning, tile and grout cleaning, mattress cleaning, pet stain services, water damage restoration etc. Please visit our service page to get a full list of our services.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="trigger fuck-mate" style="font-size: 20px;" href="#0">
+                                <i class="fa fa-sort-down insane6"></i>
+                                Which is better – dry carpet cleaning or steam carpet cleaning?
+                            </a>
+                        
+                            <div class="faq-content">
+                                <p>The majority of carpet cleaners only have the skills and equipment to provide one, not both services.
+                                <br/> A professional carpet cleaner should carry both dry and steam cleaning systems in the vehicle.
+                                <br/> Both methods have their place and can be used when appropriate.
+                                <br/> A lot of factors come into play when deciding which system to use.</p>
+                                <p>For example;</p>
+                                <p>Your carpet is cleaned regularly; You can alternate between dry and steam on each cleaning visit.
+                                <br/> Your carpet has pets regularly walking and soiling the carpet; Steam cleaning recommended.
+                                <br/> You have purchased a new house and you are cleaning the carpet; As you don’t know the history of the carpet cleaning it is best to perform a deep steam clean.
+                                <br/> You have visitors coming to your house tomorrow and you want to give your carpets a quick freshen up and have limited drying time; Dry cleaning recommended.</p>
+                                <p>Drymaster technicians carry both Dry and Steam cleaning systems in the vehicle.
+                                <br/> After inspecting your carpet the technician will advise you on the best method to use.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="trigger fuck-mate" href="#0" style="font-size: 20px;">
+                                <i class="fa fa-sort-down insane6"></i>
+                                What furniture would be expected to be moved when I have my carpets cleaned?
+                            </a>
+                             
+                            <div class="faq-content">
+                                <p>
+                                    Drymaster will include furniture moving for the following items: sofas and lounge suites, tables and chairs, beds on wheels and light furniture that one technician could expect to move.<br><br>
+                                    Furniture that we don’t move: bookcases, fishtanks, waterbeds, china cabinets, computers and delicate or fragile items.<br><br>
+                                    It is always best to remove items to an area that is not being cleaned before we arrive.
+                                </p>
+                            </div>
+                        </li>
+
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="faq-items">
+                    <ul class="faq-group">
+                        <li>
+                            <a class="trigger fuck-mate" style="font-size: 20px;" href="#0">
+                            <i class="fa fa-sort-down insane6"></i>
+                        How long will it take to clean my carpets?</a>
+                            <div class="faq-content">
+                                <p>
+                                    On average, it will take approximately 25 minutes per room. This time can vary greatly depending on the amount of furniture to be moved, how soiled the carpet is, and any necessary spot removal treatments.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="trigger fuck-mate" style="font-size: 20px;" href="#0">
+                            <i class="fa fa-sort-down insane6"></i>
+                        What guarantee does Drymaster provide</a>
+                            <div class="faq-content">
+                                <p>
+                                    We do not guarantee to remove permanent stains in the cleaning process but can offer additional services for permanent stains such as ; spot dyeing, colour repair, invisible mending.<br><br>
+                                    Drymaster Carpet Cleaning will guarantee to clean to Australian Standards 1995-3775.<br><br>
+                                    If you are not happy with our service we will always return to your premises and re clean any areas of concern provided these areas are not affected by fair wear and tear, traffic lane discolouration, fading, permanent stains etc..<br><br>
+                                    Any claims or re-cleans will only be accepted up to 7 days from initial clean.
+                                </p>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <a class="trigger fuck-mate" style="font-size: 20px;" href="#0">
+                            <i class="fa fa-sort-down insane6"></i>
+                        What stains will be removed when I have my carpets cleaned?</a>
+                            <div class="faq-content">
+                                <p>
+                                    A spot is a substance that is adhered to the carpet fibre, but has not become set.<br>
+                                    A stain is more advanced and may have become set.
+                                    <p>A professional carpet cleaner will remove all spots (food, grease, mud, etc).</p>
+                                    <p>A professional carpet cleaner will have more problems removing a set or permanent stain compared to a spot. Drymaster carries a large amount of stain removal solutions for the removal of coffee, tea, blood, cola, urine, red wine etc.</p>
+                                    <p>If the stain has not set and become permanent, stain removal can be successful.</p>
+                                    <p><strong>Our Policy for Stain removal is as follows:</strong></p>
+                                    <p>Normal spotting and stain removal is included in our cleaning price and our cleaning process.</p>
+                                    <p>If at the completion of cleaning there are stains that have not been removed in the cleaning process that require extra treatments such as “Heat transfer methods” or “Spot dyeing” these procedures will be discussed with you and a quote given for the removal of these more difficult stains.</p>
+                                    <p>We will also discuss with you whether the stain will respond to extra treatment and the likelihood of the stain being able to be removed, partially removed or lightened or if the stain is deemed permanent.
+                                    <br /> Often extra treatments as mentioned above are not required as 85% of spots and stains are removed in the initial cleaning process.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="trigger fuck-mate" style="font-size: 20px;" href="#0">
+                            <i class="fa fa-sort-down insane6"></i>
+                        How long does it take for my carpet to dry after cleaning?</a>
+                            <div class="faq-content">
+                                <p>
+                                    From 30 minutes to 8 hours. It depends on what system is used and the degree soiling.<br><br>
+                                    If you use our superior Dry Fusion system, we can have your carpets dry between 30 minutes and 1 hour. If your carpets are extremely soiled and we need to use a 6 stage system, it can take between 2 hours and 8 hours to dry.<br><br>
+                                    <p>The average drying time is 4 hours.
+                                </p>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- My About Section Why this ? -->
+    <section class="cs-about-area animatedParent animateOnce">
+        <div class="container">
+            <div class="section-wrap">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-12">
+                        <div class="cs-about-col animated bounceInLeft slow">
+                            <div class="intro-icon">
+                                <i class="flaticon-vacuum-cleaner"></i>
+                            </div>
+                            <div class="main-title ab4">
+                                <h2 style="color: #0083ff;">Why Choose <br>Dry Master Carpet Cleaning</h2>
+                            </div>
+                            <h4 style="font-size: 24px; padding-bottom: 10px;">28 Years Of Experience</h4>
+                            <p class="insane4">
+                                Established in 1989 Drymaster has operations in Sydney, Melbourne, Adelaide, Perth, Brisbane, Gold Coast, Newcastle, Central Coast, Wollongong and Canberra.
+                                We are an Australian owned family business with a network of owner operators throughout Australia.
+                                Our fully trained and certified technicians are qualified in their respective fields to bring their services to you the customer in a professional manner.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-8 col-sm-12">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/DaQRDsekCis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Faq Section -->
+    <div class="container">
+        <div class="row insane">
+            <div class="col-lg-6">
+                <div class="faq-items">
+                    <ul class="faq-group">
+                        <li class="">
+                            <a class="trigger fuck-mate" href="#0" style="font-size: 20px;">
+                             <i class="fa fa-sort-down insane6"></i>
+                            Carpet Dry Or Steam</a>
+                            <div class="faq-content">
+                                <p>
+                                    Your choice of carpet dry or steam cleaning. We carry both systems in our vans. When your technician arrives at your premises he will inspect your carpet and advise you which is the best system to use for your <a href="#">carpet cleaning Melbourne</a>.
+                                    <br><br>
+                                    Drymaster charges the same price for Dry or Steam cleaning. Which method to use will depend on soiling, time since your carpet was last cleaned, pets, type of carpet, (wool, nylon, stainmaster, acrylic etc.. No need to make the decision now, we will advise you upon inspection.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="trigger fuck-mate" style="font-size: 20px;" href="#0">
+                            <i class="fa fa-sort-down insane6"></i>
+                        Chemical Free Anti Allergen Cleaning</a>
+                            <div class="faq-content">
+                                <p>
+                                    Drymaster can offer you an alternative to our normal cleaning process if you require a chemical free clean using Mater blend Responsible Care System.
+                                    <br><br>
+                                    The Responsible Care System of anti-allergen cleaning and treatment is used for asthma sufferers, and people with dust mite and pet allergies.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="trigger fuck-mate" style="font-size: 20px;" href="#0">
+                            <i class="fa fa-sort-down insane6"></i>
+                        Fabric Sofa Cleaning</a>
+                            <div class="faq-content">
+                                <p>Drymaster fabric sofa cleaning is a 8 step process;<br><br>
+                                    1. Inspection and fibre testing of fabric
+                                    <br>
+                                    2. Hair removal with lint remover.<br>
+                                    3. Pre spray fabric with upholstery cleaning agent.<br>
+                                    4. Agitation of cleaning agent through fibres with brush or pad.<br>
+                                    5. Apply treatments to spots and stains.<br>
+                                    6. Apply fibre rinse and deodorizer.<br>
+                                    7. Steam clean and vacuum fibres.<br>
+                                    8. Grooming of fibres to restore nap.<br>
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a class="trigger fuck-mate" style="font-size: 20px;" href="#0">
+                            <i class="fa fa-sort-down insane6"></i>
+                        Leather Sofa Cleaning</a>
+                            <div class="faq-content">
+                                <p>Our leather cleaning process is as follows;
+                                    <br><br>
+                                    1. Placing protection sheets on your carpet or flooring before cleaning commences.<br>
+                                    2. Applying a leather cleaning solution to your leather sofa.<br>
+                                    3. Agitating the leather especially the arms and head rests.<br>
+                                    4. Removing the soiling from the leather sofa.<br>
+                                    5. Applying a nourishing cream and re-sealing of leather with highest quality leather protection.<br>
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a class="trigger fuck-mate" style="font-size: 20px;" href="#0">
+                            <i class="fa fa-sort-down insane6"></i>
+                        Rug Cleaning</a>
+                            <div class="faq-content">
+                                <p>We offer 2 types of rug cleaning services. #
+                                    <br><br>
+                                    1. Cleaning at your premises.<br>
+                                    2. Factory deep clean immersion cleaning.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="faq-items">
+                    <ul class="faq-group">
+                        <li class="">
+                            <a class="trigger fuck-mate" href="#0" style="font-size: 20px;">
+                            <i class="fa fa-sort-down insane6"></i>
+                        Mattress Cleaning</a>
+                            <div class="faq-content">
+                                <p>
+                                    From cot to king mattresses we clean and deodorise them all.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="trigger fuck-mate" style="font-size: 20px;" href="#0">
+                            <i class="fa fa-sort-down insane6"></i>
+                        Wet carpet and water damage restoration</a>
+                            <div class="faq-content">
+                                <p>
+                                    Overflow bath, storm damage, water intrusion from balcony, washing machine leak, burst hot water system, don’t panic, one phone call and we can help you with same day service in most suburbs.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="trigger fuck-mate" style="font-size: 20px;" href="#0">
+                            <i class="fa fa-sort-down insane6"></i>
+                        Pet Stains and Urine Treatments</a>
+                            <div class="faq-content">
+                                <p>
+                                    We all love our pets, and at Drymaster we have various solutions and procedures to deal with pet problems.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="trigger fuck-mate" style="font-size: 20px;" href="#0">
+                            <i class="fa fa-sort-down insane6"></i>
+                        Spot and Stain Treatments</a>
+                            <div class="faq-content">
+                                <p>
+                                    Many years of training and field testing of different spot and stain removal chemicals by our qualified technicians has given us the experience to successfully remove spots and stains.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="trigger fuck-mate" style="font-size: 20px;" href="#0">
+                            <i class="fa fa-sort-down insane6"></i>
+                        Tile and Grout Cleaning</a>
+                            <div class="faq-content">
+                                <p>
+                                    Drymaster technicians are experienced in indoor and outdoor tile and grout cleaning, driveways and hard surfaces.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="container">
+        <div class="row insane2">
+            <div class="col-lg-3">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/z93JBmwhLtw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-3">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/iLIhB0OR1zY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-3">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/8_MKqMYy9yo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-3">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/p58w5Nu__xA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- End Of Video Section -->
+</section>
+
+    
+
+    
+   
+    
+
+    <!--Process Section Start-->
+    <div class="full-row color-black" style="margin-top: -10px;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 abclr">
+                <div class="row">
+                    <div class="offer process_item">
+                        <h4 class="inner-title down_line black" style="color: #fff;">Experienced in carpet steam cleaning jobs</h4>
+                        <div class="text-area"><p  style="color: #fff;">Our services cater to jobs big and small and aim to provide a prompt, reliable service every time. Whether you are afterupholstery cleaning or carpet cleaning in Adelaide’s southern, northern suburbs, western or eastern suburbs, We can visit your property and tend to all your maintenance needs.<br>At Drymaster, we understand you are invested in your carpeting and upholstery. As a professional upholstery and carpet steam cleaner.</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 abclr1">
+                <div class="row">
+                    <div class="objection process_item">
+                        <h4 class="inner-title down_line black" style="color: #fff;">Drymaster Carpet Cleaning – Carpet Cleaning Newcastle</h4>
+                        <div class="text-area"><p  style="color: #fff;">Drymaster Carpet Cleaning is the leading, cutting edge company for cleaning your carpets! Our team of expert cleaners is here to serve you with the best quality carpet cleaning Newcastle possible. We provide innovative approaches to cleaning your carpets that are considerably safer and more efficient for your carpets than more traditional methods. When you book a cleaning with us, you get the very best job possible for the best money value.</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 pull-right abclr2">
+                <div class="row">
+                    <div class="save_money process_item">
+                        <h4 class="inner-title down_line black" style="color: #fff;">Call our office to book budget carpet steam cleaning services</h4>
+                        <div class="text-area"><p style="color: #fff;">We also proudly provide exceptional tile and grout cleaning! To make a booking with an affordable upholstery cleaner or to take advantage of our cheap carpet and couch cleaning services in Adelaide, please give us a call. We provide a 7-day service to our customers across all southern, eastern, western suburbs, as well as surrounding areas of Adelaide.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Contact From Start -->
+    <section class="cs-contact-area" style="background-image: url(images/bgs/05.jpg);">
+        <div class="container">
+            <div class="section-wrap">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="cs-contact-box">
+                            <h2>GET A Free Quote</h2>
+                            <div class="small-line-2"></div>
+                            
+                                    <form method="post">
+                                        {% csrf_token %}
+                                        {{ comment_form.as_p }}
+                                        <input name="form_botcheck" class="form-control" type="hidden" value="">
+                                <button class="btn btn-default cs-my-btn" name="submit" type="submit" value="submit" data-loading-text="Please wait...">Send Us</button>
+                                        
+                                    </form>
+                            
+                            <!-- <form id="contact_form" name="contact_form" action="mail.html" method="post">
+                              <div class="row">
+                                <div class="col-sm-6">
+                                  <div class="form-group">
+                                    <input id="name" name="name" class="form-control" type="text" placeholder="Name *" required="">
+                                  </div>
+                                </div>
+                                <div class="col-sm-6">
+                                  <div class="form-group">
+                                    <input id="phone" name="phone" class="form-control" type="text" placeholder="Phone *">
+                                  </div>
+                                </div>
+                              </div>                
+                              <div class="row">
+                                <div class="col-sm-12">
+                                  <div class="form-group">
+                                    <input id="email" name="email" class="form-control required" type="email" placeholder="Email *">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <textarea id="message" name="message" class="form-control required" rows="7" placeholder="Details Here *"></textarea>
+                              </div>
+                              <div class="form-group cs-mar-0">
+                                <input name="form_botcheck" class="form-control" type="hidden" value="">
+                                <button class="btn btn-default cs-my-btn" name="submit" type="submit" value="submit" data-loading-text="Please wait...">Send Us</button>
+                              </div>
+                            </form> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="cs-cleaner-img hidden-sm hidden-xs" src="{% static 'myapp/drymaster/01.png' %}" alt="Drymaster Carpet Cleaning">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact From End -->
+
+    <!--Testimonial Start-->
+    <section class="cs-testimonial-area">
+        <div class="container">
+            <div class="section-title">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 style="color: #0083ff;">what our clients say</h2>
+                        <div class="small-line mbn"></div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="section-wrap">
+                <div class="row">
+                  <div class="testimonial-2">
+                    <!-- New Testimonials -->
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/1.png' %}" alt="images/testimonial/01.jpg">
+                            <h4>Hands down, the best<br> carpet cleaners!</h4>
+                            <span>By Noosh</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p style="margin-top: -20px;">The service here is great. We had John come to clean our carpets and everything turned out perfectly - He was early, affable and a professional. So much better than we expected! If you're looking at another carpet cleaning company, DON'T!, choose Drymaster Carpet Cleaning, because they are perfect. Will be recommending them to everyone I know and undoubtedly will be using them for future cleans.</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/2.webp' %}" alt="images/testimonial/01.jpg">
+                            <h4>Great Service</h4>
+                            <span>By Daniel</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p>The service here is great. We had Sam come to clean our carpets and everything turned out wonderful- so much better than we expected, we will definitely use this company again. Thank you so much</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/3.webp' %}" alt="images/testimonial/01.jpg">
+                            <h4>Excellent service</h4>
+                            <span>By Minnie</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p>Peter was on time, affable and experienced with cleaning our rugs and mattress.<br>
+                        The price was right too.<br>We will use the company again for our carpet clean when we vacate our rental.</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/4.png' %}" alt="images/testimonial/01.jpg">
+                            <h4>Josh was excellent,<br> great manners</h4>
+                            <span>By Ruby H.</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p style="margin-top: -20px;">The service was exactly as described on the tin. Josh was professional, polite and helpful. They just got in and got it done, it was fantastic. They were 30mins late but I'm not bothered, the carpets look great and they were just really nice to deal with. Great customer service and great manners make ALL the difference. Would definitely use this service again.</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/5.webp' %}" alt="images/testimonial/01.jpg">
+                            <h4>Great service</h4>
+                            <span>By Beth</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p>I was able to get someone out within a days notice, he text the day before, came on time , was polite, efficient and worked hard!
+                            <br>Really happy with the condition of the couches/rug.
+                            <br>Online was accurate, so no bill shock.
+                            <br>Will def use again.
+                        </p>
+                    </div>
+
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/6.png' %}" alt="images/testimonial/01.jpg">
+                            <h4>Great result</h4>
+                            <span>By Lizzy</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p>Sam was very prompt, polite & efficient. I had my leather lounge suite cleaned and it looks fantastic. My spare bedroom carpet had several stains on it was steamed cleaned and now looks like new!
+                            <br>Would not hesitate to recommend Drymaster and will definately use again
+                            <br>Really easy and good company to deal with</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/7.png' %}" alt="images/testimonial/01.jpg">
+                            <h4>Excellent, consistent <br>service.</h4>
+                            <span>By Sandie G.</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p style="margin-top: -20px;">I am now a regular customer, thanks to Johan's excellent service. He arrives on time, works efficiently and effectively, and maintains a professional and friendly manner. We have had Johan clean both carpet and tiles, and both have come up perfectly. Highly recommended!</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/8.png' %}" alt="images/testimonial/01.jpg">
+                            <h4>Amazing job</h4>
+                            <span>By Ali B.</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p>I cannot get over how clean carpets came up. My carpest look like new. Great pricing. Very quick, very professional and dry by the time I came home. Thak you!</p>
+                    </div>
+
+
+                    <!-- Previous Time -->
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/01.webp' %}" alt="images/testimonial/01.jpg">
+                            <h4>Fantastic Job</h4>
+                            <span>By Maria</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p>They cleaned our stairs back to brand new! didn't think they would come up that well but the guy did a fantastic job. Highly recommend them. Great to deal with.</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/02.webp' %}" alt="images/testimonial/02.jpg">
+                            <h4>Great Clean</h4>
+                            <span>By Lisa</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p>Did an amazing job on our rug removing dog wee- cleaned and sanitised both sides and the rug looks and smells amazing. Really thorough job. Friendly staff - recommend their service.</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/03.webp' %}" alt="">
+                            <h4>Truned upon time, <br>great job</h4>
+                            <span>By Ann6666</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p style="margin-top: -20px;">guys turned up on time, carpet looks great. very happy with the job done. booked easy on line, and tax invoice arrived in inbox the next day. I would reccomend</p>
+                    </div>
+
+
+                    <!-- 4th -->
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/04.webp' %}" alt="">
+                            <h4>Carpet Cleaning</h4>
+                            <span>deb b</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p>Thanks - it was easy to secure your services on line. Thanks to John for arriving as agreed and quick efficient and friendly service. The carpets still smell nice the day after.</p>
+                    </div>
+
+
+                    <!-- 5th -->
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/05.webp' %}" alt="">
+                            <h4>Highly recommended, <br>professional and easy <br>to deal with.</h4>
+                            <span>Anne Harrison</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p style="margin-top: -40px;">I am pleased to recommend the Drymaster team and their technician Dan. They were able to deal sensitively with my elderly father and his needs while working at the house and did a fantastic job! I will be recommending this team to all my friends and family. Thank you for a great service.</p>
+                    </div>
+
+
+                    <!-- 6th -->
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/06.webp' %}" alt="">
+                            <h4>Great experience</h4>
+                            <span>Display Home</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p>Lovely experience dealing with Mark, Luke and the team. I work at a Display Home, and they were able to accommodate us by coming in earlier before we opened. The lounges were almost dry when complete, and Luke finished 3 lounge sets (13 seats) in 2hrs! Our white lounges, which see high traffic of people/kids/shoes were very well cleaned. A positive experience overall. Thank you. Would highly recommend.</p>
+                    </div>
+
+
+                    <!-- 7th -->
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/07.webp' %}" alt="">
+                            <h4>Carpet</h4>
+                            <span>By Sandra</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p>Very Happy with Luke he presented himself on time and was very obliging on any request<br>
+                        I asked, I would be happy to have your company clean any additional carpets in our home in the future.</p>
+                    </div>
+
+
+                    <!-- 8th -->
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/08.webp' %}" alt="">
+                            <h4>Great Job</h4>
+                            <span>By Maggie</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p>Job was completed in the time estimated and the job was thorough and done to satisfaction. Very happy with the result. I would definitely use them again. Thanks very much</p>
+                    </div>
+
+
+                    <!-- 9th -->
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/09.webp' %}" alt="">
+                            <h4>Excellent job, <br>great customer service</h4>
+                            <span>By Peter Coad</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p style="margin-top: -20px;">Joshua from Angel Carpet Cleaning, cleaned my grotty fabric lounge and two carpet squares, very satisfied with the results and friendly service, great results.Highly recommend the company, called to confirm the day before and 30 mins before arrival. Excellent</p>
+                    </div>
+
+
+                    <!-- 10th -->
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/10.webp' %}" alt="">
+                            <h4>Made a huge difference</h4>
+                            <span>By Louise S.</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p>A big thank you to Dan for making my carpets and couch smell so much better and look so much cleaner! All the pet stains are gone. It took a bit longer to dry than anticipated, but it was an afternoon job and it’s winter, so that’s to be expected.</p>
+                    </div>
+
+                    <!-- 11th -->
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/11.webp' %}" alt="">
+                            <h4>Fantastic job! Lounge and <br>rug looked amazing<br> afterwards.</h4>
+                            <span>By Aleisha</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p style="margin-top: -40px;">Highly recommend. My lounge and rug look like new again. Booking was simple and easy. On time, friendly and job done to exceptional standard. Thank you very much, will definitely use again.</p>
+                    </div>
+
+
+                    <!-- 12th -->
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/12.webp' %}" alt="">
+                            <h4>Job well done.......AGAIN !!</h4>
+                            <span>By P. F Chou Lee</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p>This is the second time we`ve used Drymaster for an end of lease carpet clean. Just like the first time , they didn`t disappoint. Andy was fast, efficient and professional. Very happy with the service provided. Took less time than I thought too. Would highly recommend Drymaster to everyone. Will definately continue to use them for all our professional carpet cleaning needs in the future.</p>
+                    </div>
+
+                    <!-- 13th -->
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/13.webp' %}" alt="">
+                            <h4>Carpet Clean</h4>
+                            <span>By Trish</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p>Dan did a wonderful job cleaning our carpets in lounge room two bedrooms and hall. He was efficient and did the whole job in less time than I thought it would take. He was friendly throughout and I would definitely recommend Drymaster Carpet Cleaning and use again. I would like to add that on finding Drymaster on the Internet Mark telephoned to discuss the job I felt that was first class.</p>
+                    </div>
+
+                    <!-- 14th -->
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/14.webp' %}" alt="">
+                            <h4>Good job well done.</h4>
+                            <span>By Alan</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p>Job was not easy, but was done efficiently and well. Small mix up with time of arrival, but apart from that, very happy with the result. Will certainly use Drymaster again and would be happy to recommend them.</p>
+                    </div>
+
+                    <!-- 15th -->
+                    <div class="item">
+                        <div class="cs-testimonial-item">
+                           <div class="cs-testimonial-name"> 
+                            <img src="{% static 'myapp/drymaster/testimonials/15.webp' %}" alt="">
+                            <h4>Great job</h4>
+                            <span>By Rose S.</span>
+                            <div class="cs-start-mark">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                            <i class="fa fa-quote-right cs-quote" aria-hidden="true"></i>
+                          </div> 
+                        </div>
+                        <p>Josh and his co worker did a great job. They were on time, efficient and polite, texting me prior that they were on their way. No hesitation to use Drymaster again.</p>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Testimonial End-->
+
+    <!-- <div class="row">
+        <a href="tel:1300662188">
+            <button type="button" id="floatbtn" class="btn ver-btn">1300 662 188</button>
+        </a>
+    </div> -->
+    
+    <!-- footer start -->
+    <footer id="contact" class="cs-footer-area animatedParent animateOnce" style="background: url(images/bgs/07.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 col-sm-6">
+                    <div class="cs-footer-col">
+                       <a href="index.html"><img class="cs-footer-logo" src="{% static 'myapp/drymaster/footer_logo.png' %}" alt=""></a> 
+                       <p>
+                           With over 29 years of experience in the cleaning industry our reputation has grown and grown. And we owe it all to you, our clients.
+                       </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-sm-6">
+                    <div class="cs-footer-col">
+                        <h4>Our Locations</h4>
+                        <ul class="cs-news-list">
+                            <a href="wollongong.html"><li>Wollongong Carpet Cleaning</li></a>
+                            <a href="goldcoast.html"><li>Gold Coast Carpet Cleaning</li></a>
+                            <a href="newcastle.html"><li>Newcastle Carpet Cleaning</li></a>
+                            <a href="adelaide.html"><li>Adelaide Carpet Cleaning</li></a>
+                            <a href="perth.html"><li>Perth Carpet Cleaning</li></a>
+                            <a href="brisbane.html"><li>Brisbane Carpet Cleaning</li></a>
+                            <a href="canberra.html"><li>Canberra Carpet Cleaning</li></a>
+                            <a href="sydney.html"><li>Sydney Carpet Cleaning</li></a>
+                            <a href="melbourne.html"><li>Melbourne Carpet Cleaning</li></a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6 col-sm-6">
+                    <div class="cs-footer-col">
+                        <h4>Contact us</h4>
+                        <ul class="cs-footer-contact">
+                            <li>
+                                <p style="font-size: 18px;"><span>Address :</span><br>
+                                2/34 Moylan St, <br>Bentleigh East VIC <br>3165 Australia</p>
+                            </li>
+                            <li>
+                                <p style="font-size: 18px;"><span>Call Us :</span><br>
+                                <a href="tel:1300662188" style="color: #fff;">1300 662 188</p></a>
+                            </li>
+                            <li>
+                                <p style="font-size: 18px;"><span>Email :</span><br>
+                                <a href="mailto:office@carpetcleaning.com.au" style="color: #fff;">office@carpetcleaning.com.au</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-sm-6">
+                    <div class="cs-footer-col">
+                            <h4>Instagram</h4>
+                            <div class="cs-flicker-img clearfix">
+                                <ul>
+                                  <li class="animated bounceIn slow delay-250"><a href="images/flicker/01.jpg" class="lightbox-image" title="Drymaster Carpet Cleaning"><img src="{% static 'myapp/drymaster/footer/1.jpg' %}" alt=""></a></li>
+                                  <li class="animated bounceIn slow delay-500"><a href="images/flicker/02.jpg" class="lightbox-image" title="Drymaster Carpet Cleaning"><img src="{% static 'myapp/drymaster/footer/2.jpg' %}" alt=""></a></li>
+                                  <li class="animated bounceIn slow delay-750"><a href="images/flicker/03.jpg" class="lightbox-image" title="Drymaster Carpet Cleaning"><img src="{% static 'myapp/drymaster/footer/3.jpg' %}"alt=""></a></li>
+                                  <li class="animated bounceIn slow delay-1000"><a href="images/flicker/04.jpg" class="lightbox-image" title="Drymaster Carpet Cleaning"><img src="{% static 'myapp/drymaster/footer/4.jpg' %}"alt=""></a></li>
+                                  <li class="animated bounceIn slow delay-1250"><a href="images/flicker/05.jpg" class="lightbox-image" title="Drymaster Carpet Cleaning"><img src="{% static 'myapp/drymaster/footer/5.jpg' %}"alt=""></a></li>
+                                  <li class="animated bounceIn slow delay-1500"><a href="images/flicker/06.jpg" class="lightbox-image" title="Drymaster Carpet Cleaning"><img src="{% static 'myapp/drymaster/footer/6.jpg' %}"alt=""></a></li>
+                                  <li class="animated bounceIn slow delay-1250"><a href="images/flicker/05.jpg" class="lightbox-image" title="Drymaster Carpet Cleaning"><img src="{% static 'myapp/drymaster/footer/7.jpg' %}"alt=""></a></li>
+                                  <li class="animated bounceIn slow delay-1500"><a href="images/flicker/06.jpg" class="lightbox-image" title="Drymaster Carpet Cleaning"><img src="{% static 'myapp/drymaster/footer/8.jpg' %}"alt=""></a></li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <!-- copyright start -->
+    <section class="cs-copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>Copyright © 2019 Drymaster Carpet Cleaning. All rights reserved. Terms of Use and Privacy Policy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- copyright end -->
+
+    <!-- Call Now -->
+    <a href="tel:1300662188" id="callnowbutton" >
+        <img class="ab30" src="{% static 'myapp/img/call-answer.png' %}" alt="">
+        1300 662 188
+    </a>
+
+    <div class="scroll-to-top scroll-to-target" data-target=".page-top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div>
+
+    <script src="{% static 'myapp/js/jquery.min.js' %}"></script> 
+    <script src="{% static 'myapp/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'myapp/js/revolution.min.js' %}"></script> 
+    <script src="{% static 'myapp/js/jquery.fancybox.pack.js' %}"></script> 
+    <script src="{% static 'myapp/js/jquery.fancybox-media.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.flexslider-min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.isotope.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'myapp/js/imagesloaded.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.stellar.js' %}"></script>
+    <script src="{% static 'myapp/js/css3-animate-it.js' %}"></script>
+    <script src="{% static 'myapp/js/validate.js' %}"></script>
+    <script src="{% static 'myapp/js/custom.js' %}"></script>
+
+    <script>
+        jQuery(document).ready(function($){
+
+    var MqM= 768,
+        MqL = 1024;
+
+    var faqsSections = $('.faq-group'),
+        faqTrigger = $('.trigger'),
+        faqsContainer = $('.faq-items'),
+        faqsCategoriesContainer = $('.categories'),
+        faqsCategories = faqsCategoriesContainer.find('a'),
+        closeFaqsContainer = $('.cd-close-panel');
+    
+    //select a faq section 
+    faqsCategories.on('click', function(event){
+        event.preventDefault();
+        var selectedHref = $(this).attr('href'),
+            target= $(selectedHref);
+        if( $(window).width() < MqM) {
+            faqsContainer.scrollTop(0).addClass('slide-in').children('ul').removeClass('selected').end().children(selectedHref).addClass('selected');
+            closeFaqsContainer.addClass('move-left');
+            $('body').addClass('cd-overlay');
+        } else {
+            $('body,html').animate({ 'scrollTop': target.offset().top - 19}, 200); 
+        }
+    });
+
+    //close faq lateral panel - mobile only
+    $('body').bind('click touchstart', function(event){
+        if( $(event.target).is('body.cd-overlay') || $(event.target).is('.cd-close-panel')) { 
+            closePanel(event);
+        }
+    });
+    faqsContainer.on('swiperight', function(event){
+        closePanel(event);
+    });
+
+
+    faqTrigger.on('click', function(event){
+        event.preventDefault();
+        $(this).next('.faq-content').slideToggle(200).end().parent('li').toggleClass('content-visible');
+    });
+
+    $(window).on('scroll', function(){
+        if ( $(window).width() > MqL ) {
+            (!window.requestAnimationFrame) ? updateCategory() : window.requestAnimationFrame(updateCategory); 
+        }
+    });
+
+    $(window).on('resize', function(){
+        if($(window).width() <= MqL) {
+            faqsCategoriesContainer.removeClass('is-fixed').css({
+                '-moz-transform': 'translateY(0)',
+                '-webkit-transform': 'translateY(0)',
+                '-ms-transform': 'translateY(0)',
+                '-o-transform': 'translateY(0)',
+                'transform': 'translateY(0)',
+            });
+        }   
+        if( faqsCategoriesContainer.hasClass('is-fixed') ) {
+            faqsCategoriesContainer.css({
+                'left': faqsContainer.offset().left,
+            });
+        }
+    });
+
+    function closePanel(e) {
+        e.preventDefault();
+        faqsContainer.removeClass('slide-in').find('li').show();
+        closeFaqsContainer.removeClass('move-left');
+        $('body').removeClass('cd-overlay');
+    }
+
+    function updateCategory(){
+        updateCategoryPosition();
+        updateSelectedCategory();
+    }
+
+    function updateCategoryPosition() {
+        var top = $('.faq').offset().top,
+            height = jQuery('.faq').height() - jQuery('.categories').height(),
+            margin = 20;
+        if( top - margin <= $(window).scrollTop() && top - margin + height > $(window).scrollTop() ) {
+            var leftValue = faqsCategoriesContainer.offset().left,
+                widthValue = faqsCategoriesContainer.width();
+            faqsCategoriesContainer.addClass('is-fixed').css({
+                'left': leftValue,
+                'top': margin,
+                '-moz-transform': 'translateZ(0)',
+                '-webkit-transform': 'translateZ(0)',
+                '-ms-transform': 'translateZ(0)',
+                '-o-transform': 'translateZ(0)',
+                'transform': 'translateZ(0)',
+            });
+        } else if( top - margin + height <= $(window).scrollTop()) {
+            var delta = top - margin + height - $(window).scrollTop();
+            faqsCategoriesContainer.css({
+                '-moz-transform': 'translateZ(0) translateY('+delta+'px)',
+                '-webkit-transform': 'translateZ(0) translateY('+delta+'px)',
+                '-ms-transform': 'translateZ(0) translateY('+delta+'px)',
+                '-o-transform': 'translateZ(0) translateY('+delta+'px)',
+                'transform': 'translateZ(0) translateY('+delta+'px)',
+            });
+        } else { 
+            faqsCategoriesContainer.removeClass('is-fixed').css({
+                'left': 0,
+                'top': 0,
+            });
+        }
+    }
+
+    function updateSelectedCategory() {
+        faqsSections.each(function(){
+            var actual = $(this),
+                margin = parseInt($('.faq-title').eq(1).css('marginTop').replace('px', '')),
+                activeCategory = $('.categories a[href="#'+actual.attr('id')+'"]'),
+                topSection = (activeCategory.parent('li').is(':first-child')) ? 0 : Math.round(actual.offset().top);
+            
+            if ( ( topSection - 20 <= $(window).scrollTop() ) && ( Math.round(actual.offset().top) + actual.height() + margin - 20 > $(window).scrollTop() ) ) {
+                activeCategory.addClass('selected');
+            }else {
+                activeCategory.removeClass('selected');
+            }
+        });
+    }
+});
+    </script>
+
+</body>
+</html>

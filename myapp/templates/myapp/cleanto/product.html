@@ -1,0 +1,773 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!Doctype html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <title>Cleanto Booking</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="{% static 'cleanto/assets/images/backgrounds/fevicon.png' %}"" />
+    <link rel="stylesheet" href="{% static 'cleanto/assets/css/ct-main.css' %}"  type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'cleanto/assets/css/ct-common.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'cleanto/assets/css/tooltipster.bundle.min.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'cleanto/assets/css/tooltipster-sideTip-shadow.min.css' %}" type="text/css" media="all" />
+    <script>
+        var ct_postalcode_statusObj = {
+            'ct_postalcode_status': 'N'
+        };
+        var scrollable_cartObj = {
+            'scrollable_cart': 'Y'
+        };
+    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" />
+    <link rel="stylesheet" href="{% static 'cleanto/assets/css/login-style.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'cleanto/assets/css/ct-responsive.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'cleanto/assets/css/ct-reset.min.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'cleanto/assets/css/jquery-ui.min.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'cleanto/assets/css/intlTelInput.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'cleanto/assets/css/jquery-ui.theme.min.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'cleanto/assets/css/font-awesome/css/font-awesome.min.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'cleanto/assets/css/line-icons/simple-line-icons.css' %}" type="text/css" media="all" />
+
+    <script src="{% static 'cleanto/assets/js/jquery-2.1.4.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'cleanto/assets/js/jquery.mask.js' %}" type="text/javascript"></script>
+    <script>
+        function payment_process_js(payment_method, thankyou_page_setting_value, dataString, front_url) {}
+    </script>
+    <script src="{% static 'cleanto/assets/js/ct-common-jqueryd853.js?new=1569502398' %}" type="text/javascript"></script>
+
+    <script src="{% static 'cleanto/assets/js/tooltipster.bundle.min.js' %}" type="text/javascript"></script>
+
+    <script>
+        var errorobj_please_select_a_service = "Please select a service";
+        var errorobj_please_select_units_or_addons = "Please select units or addons";
+        var errorobj_please_select_appointment_date = "Please select appointment date";
+        var errorobj_please_accept_terms_and_conditions = "Please accept terms and conditions";
+        var errorobj_incorrect_email_address_or_password = "Incorrect email address or password";
+        var errorobj_please_enter_valid_email_address = "Please enter valid email address";
+        var errorobj_please_enter_minimum_20_characters = "Please Enter Minimum 20 Characters";
+        var errorobj_please_enter_email_address = "Please enter email address";
+        var errorobj_please_enter_password = "Please enter password";
+        var errorobj_please_enter_minimum_8_characters = "Please enter minimum 8 characters";
+        var errorobj_please_enter_maximum_15_characters = "Please enter maximum 15 characters";
+        var errorobj_please_enter_first_name = "Please enter first name";
+        var errorobj_please_enter_only_alphabets = "Please enter only alphabets";
+        var errorobj_please_enter_minimum_2_characters = "Please enter minimum 2 characters";
+        var errorobj_please_enter_last_name = "Please enter last name";
+        var errorobj_email_already_exists = "Email already exists";
+        var errorobj_sorry_service_already_exist = "Sorry service already exist";
+        var errorobj_please_enter_phone_number = "Please enter phone number";
+        var errorobj_please_enter_only_numerics = "Please enter only numerics";
+        var errorobj_please_enter_minimum_10_digits = "Please enter minimum 10 digits";
+        var errorobj_please_enter_maximum_14_digits = "Please enter maximum 14 digits";
+        var errorobj_please_enter_address = "Please enter address";
+        var errorobj_please_enter_zip_code = "Please enter zip code";
+        var errorobj_please_enter_proper_zip_code = "Please enter proper zip code";
+        var errorobj_please_enter_minimum_5_digits = "Please enter minimum 5 digits";
+        var errorobj_please_enter_maximum_7_digits = "Please enter maximum 7 digits";
+        var errorobj_please_enter_city = "Please enter city";
+        var errorobj_please_enter_proper_city = "Please enter proper city";
+        var errorobj_please_enter_maximum_48_characters = "Please enter maximum 48 characters";
+        var errorobj_please_enter_proper_state = "Please enter proper state";
+        var errorobj_please_enter_contact_status = "Please enter contact status";
+        var errorobj_please_enter_maximum_100_characters = "Please enter maximum 100 characters";
+        var errorobj_your_cart_is_empty_please_add_cleaning_services = "Your cart is empty please add cleaning services";
+        var errorobj_coupon_expired = "Coupon expired";
+        var errorobj_invalid_coupon = "Invalid coupon";
+        var errorobj_our_service_not_available_at_your_location = "Our service not available at your location";
+        var errorobj_please_enter_proper_postal_code = "Please enter proper postal code";
+        var errorobj_invalid_email_id_please_register_first = "Invalid Email ID please register first";
+        var errorobj_your_password_send_successfully_at_your_registered_email_id = "Your password send successfully at your registered Email ID";
+        var errorobj_your_password_reset_successfully_please_login = "Your password reset successfully please login";
+        var errorobj_new_password_and_retype_new_password_mismatch = "New password and retype new password mismatch";
+        var errorobj_appointment_booking_confirm = "Appointment booking confirm";
+        var errorobj_appointment_booking_rejected = "Appointment booking rejected";
+        var errorobj_appointment_marked_as_no_show = "Appointment marked as no show";
+        var errorobj_appointment_reschedules_successfully = "Appointment Reschedules successfully";
+        var errorobj_booking_deleted = "Booking Deleted";
+        var errorobj_break_end_time_should_be_greater_than_start_time = "Break End Time should be greater than Start time";
+        var errorobj_cancel_by_client = "Cancel by client";
+        var errorobj_cancelled_by_service_provider = "Cancelled by service provider";
+        var errorobj_confirmed = "Confirmed";
+        var errorobj_updated_labels = "Updated labels";
+        var errorobj_design_set_successfully = "Design set successfully";
+        var errorobj_end_break_time_updated = "End break time updated";
+        var errorobj_enter_alphabets_only = "Enter alphabets only";
+        var errorobj_enter_only_alphabets = "Enter only alphabets";
+        var errorobj_enter_only_alphabets_numbers = "Enter only Alphabets/Numbers";
+        var errorobj_enter_only_digits = "Enter only Digits";
+        var errorobj_enter_valid_url = "Enter%20valid%20Url.html";
+        var errorobj_enter_only_numeric = "Enter only numeric";
+        var errorobj_enter_proper_country_code = "Enter proper country code";
+        var errorobj_frequently_discount_status_updated = "Frequently discount status updated";
+        var errorobj_frequently_discount_updated = "Frequently discount updated";
+        var errorobj_manage_addons_service = "Manage addons service";
+        var errorobj_maximum_file_upload_size_2_mb = "Maximum file upload size 2 MB";
+        var errorobj_method_deleted_successfully = "Method deleted successfully";
+        var errorobj_method_inserted_successfully = "Method inserted successfully";
+        var errorobj_minimum_file_upload_size_1_kb = "Minimum file upload size 1 KB";
+        var errorobj_off_time_added_successfully = "Off time added successfully";
+        var errorobj_only_jpeg_png_and_gif_images_allowed = "Only jpeg, png and gif images Allowed";
+        var errorobj_password_must_be_8_character_long = "Password must be 8 character long";
+        var errorobj_password_should_not_exist_more_then_20_characters = "Password should not exist more then 20 characters";
+        var errorobj_pending = "Pending";
+        var errorobj_please_assign_base_price_for_unit = "Please assign base price for unit";
+        var errorobj_please_assign_price = "Please assign price";
+        var errorobj_please_assign_qty = "Please assign quantity";
+        var errorobj_please_enter_api_password = "Please enter API Password";
+        var errorobj_please_enter_api_username = "Please enter API Username";
+        var errorobj_please_enter_color_code = "Please enter Color Code";
+        var errorobj_please_enter_country = "Please enter country";
+        var errorobj_please_enter_coupon_limit = "Please enter coupon limit";
+        var errorobj_please_enter_coupon_value = "Please enter coupon value";
+        var errorobj_please_enter_coupon_code = "Please enter Coupon code";
+        var errorobj_please_enter_email = "Please enter email";
+        var errorobj_please_enter_fullname = "Please enter Fullname";
+        var errorobj_please_enter_maxlimit = "Please enter maxLimit";
+        var errorobj_please_enter_method_title = "Please enter method title";
+        var errorobj_please_enter_name = "Please enter name";
+        var errorobj_please_enter_only_numeric = "Please enter only numeric";
+        var errorobj_please_enter_proper_base_price = "Please enter proper base price";
+        var errorobj_please_enter_proper_name = "Please enter proper name";
+        var errorobj_please_enter_proper_title = "Please enter proper title";
+        var errorobj_please_enter_publishable_key = "Please Enter Publishable Key";
+        var errorobj_please_enter_secret_key = "Please Enter Secret Key";
+        var errorobj_please_enter_service_title = "Please enter service Title";
+        var errorobj_please_enter_signature = "Please enter signature";
+        var errorobj_please_enter_some_qty = "Please Enter Some Qty";
+        var errorobj_please_enter_title = "Please enter title";
+        var errorobj_please_enter_unit_title = "Please enter unit title";
+        var errorobj_please_enter_valid_country_code = "Please enter valid country code";
+        var errorobj_please_enter_valid_service_title = "Please enter valid service title";
+        var errorobj_please_enter_valid_price = "Please enter valid price";
+        var errorobj_please_enter_zipcode = "Please enter zipcode";
+        var errorobj_please_enter_state = "Please enter state";
+        var errorobj_please_retype_correct_password = "Please retype correct password";
+        var errorobj_please_select_porper_time_slots = "Please select porper time slots";
+        var errorobj_please_select_time_between_day_availability_time = "Please select time between day availability time";
+        var errorobj_please_valid_value_for_discount = "Please valid value for discount";
+        var errorobj_please_enter_confirm_password = "Please enter confirm password";
+        var errorobj_please_enter_new_password = "Please enter new password";
+        var errorobj_please_enter_old_password = "Please enter old password";
+        var errorobj_please_enter_valid_number = "Please enter valid number";
+        var errorobj_please_enter_valid_number_with_country_code = "Please enter valid number with country code";
+        var errorobj_please_select_end_time_greater_than_start_time = "Please select end time greater than start time";
+        var errorobj_please_select_end_time_less_than_start_time = "Please select end time less than start time";
+        var errorobj_please_select_a_crop_region_and_then_press_upload = "Please select a crop region and then press upload";
+        var errorobj_please_select_a_valid_image_file_jpg_and_png_are_allowed = "Please select a valid image file jpg and png are allowed";
+        var errorobj_profile_updated_successfully = "Profile updated successfully";
+        var errorobj_qty_rule_deleted = "Quantity rule deleted";
+        var errorobj_record_deleted_successfully = "Record deleted successfully";
+        var errorobj_record_updated_successfully = "Record updated successfully";
+        var errorobj_rejected = "Rejected";
+        var errorobj_rescheduled = "Rescheduled";
+        var errorobj_schedule_updated_to_monthly = "Schedule updated to Monthly";
+        var errorobj_schedule_updated_to_weekly = "Schedule updated to Weekly";
+        var errorobj_sorry_method_already_exist = "Sorry method already exist";
+        var errorobj_sorry_no_notification = "Sorry, you have not any upcoming appointment";
+        var errorobj_sorry_promocode_already_exist = "Sorry promocode already exist";
+        var errorobj_sorry_unit_already_exist = "Sorry unit already exist";
+        var errorobj_sorry_we_are_not_available = "Sorry we are not available";
+        var errorobj_start_break_time_updated = "Start break time updated";
+        var errorobj_status_updated = "Status updated";
+        var errorobj_time_slots_updated_successfully = "Time slots updated successfully";
+        var errorobj_unit_inserted_successfully = "Unit inserted successfully";
+        var errorobj_units_status_updated = "Units status updated";
+        var errorobj_updated_appearance_settings = "Updated appearance aettings";
+        var errorobj_updated_sms_settings = "Updated SMS Settings";
+        var errorobj_updated_company_details = "Updated company details";
+        var errorobj_updated_email_settings = "Updated E-mail settings";
+        var errorobj_updated_general_settings = "Updated general settings";
+        var errorobj_updated_payments_settings = "Updated payments settings";
+        var errorobj_your_old_password_incorrect = "Old password incorrect";
+        var errorobj_please_enter_minimum_5_chars = "Please enter minimum 5 characters";
+        var errorobj_please_enter_maximum_10_chars = "Please enter maximum 10 characters";
+        var errorobj_please_enter_only_7_chars_maximum = "Please enter only 7 chars maximum";
+        var errorobj_please_enter_postal_code = "Please enter postal code";
+        var errorobj_front_display_language_changed = "Front display language changed";
+        var errorobj_updated_front_display_language_and_update_labels = "Updated front display language and update labels";
+        var errorobj_cancelled_by_client = "Cancelled by client";
+        var errorobj_please_enter_maximum_20_chars = "Please enter maximum 20 characters";
+        var errorobj_record_inserted_successfully = "Record Inserted Successfully";
+        var errorobj_atleast_one_payment_method_should_be_enable = "Atleast one payment method should be enable";
+        var errorobj_booking_cancel = "Boooking Cancelled";
+        var errorobj_success = "Success";
+        var errorobj_failure = "Failure";
+        var errorobj_you_can_only_use_valid_zipcode = "You can only use valid zipcode";
+        var errorobj_minutes = "Minutes";
+        var errorobj_hours = "Hours";
+        var errorobj_days = "Days";
+        var errorobj_months = "Months";
+        var errorobj_year = "Year";
+        var errorobj_please_enter_firstname = "Please enter firstname";
+        var errorobj_please_enter_lastname = "Please enter lastname";
+        var errorobj_please_enter_account_sid = "Please enter Accout SID";
+        var errorobj_please_enter_auth_token = "Please enter Auth Token";
+        var errorobj_please_enter_sender_number = "Please enter Sender Number";
+        var errorobj_please_enter_admin_number = "Please enter Admin Number";
+        var errorobj_please_enter_valid_value_for_discount = "Please enter valid value for discount";
+        var errorobj_please_enter_api_login_id = "Please Enter API Login ID";
+        var errorobj_please_enter_transaction_key = "Please Enter Transaction Key";
+        var errorobj_please_enter_secret_key = "Please Enter Secret Key";
+        var errorobj_please_enter_publishable_key = "Please Enter Publishable Key";
+        var errorobj_please_enter_sms_message = "Please enter sms message";
+        var errorobj_please_enter_email_message = "Please enter email message";
+        var errorobj_please_enter_some_qty = "Please Enter Some Qty";
+        var errorobj_please_enter_private_key = "Please Enter Private Key";
+        var errorobj_please_enter_seller_id = "Please enter Seller ID";
+        var errorobj_please_publishable_key = "Please Enter Publishable Key";
+
+        var errorobj_password_must_be_only_10_characters = "Password Must Be Only 10 Characters";
+
+        var errorobj_password_at_least_have_8_characters = "Password At Least Have 8 Characters";
+        var errorobj_please_enter_retype_new_password = "Please Enter Retype New Password";
+        var errorobj_your_password_send_successfully_at_your_email_id = "Your Password Send Successfully At Your Email ID";
+
+        var errorobj_please_fill_all_the_company_informations_and_add_some_services_and_addons = "Required configurations are not completed.";
+        var errorobj_please_select_atleast_one_unit = "Please select atleast one unit";
+        var errorobj_please_select_atleast_one_checkout_method = "Please select atleast one checkout method";
+        var errorobj_customer_deleted_successfully = "Customer deleted successfully";
+        var errorobj_are_you_sure_you_want_to_delete_client = "Are You Sure You Want To Delete Client?";
+        var errorobj_please_enter_minimum_3_chars = "Please enter minimum 3 Characters";
+        var errorobj_active = "Active";
+        var errorobj_please_select_units_and_addons = "Please select units and addons";
+        var errorobj_please_login_to_complete_booking = "Please login to complete booking";
+        var errorobj_please_select_expiry_date = "Please select expiry date";
+        var errorobj_please_enter_merchant_key = "Please enter Merchant Key";
+        var errorobj_please_enter_salt_key = "Please enter Salt Key";
+        var errorobj_please_enter_account_username = "Please enter account username";
+        var errorobj_please_enter_account_hash_id = "Please enter account hash id";
+        var errorobj_please_enter_below_36_characters = "Please enter below 36 characters";
+        var errorobj_invalid_values = "Invalid values";
+        /* front end form errors */
+        var errorobj_min_ps = "Please enter minimum 8 characters";
+        var errorobj_max_ps = "Please enter maximum 10 characters";
+
+        var errorobj_req_fn = "Please enter first name";
+        var errorobj_min_fn = "Please enter minimum 3 characters";
+        var errorobj_max_fn = "Please enter maximum 15 characters";
+
+        var errorobj_req_ln = "Please enter last name";
+        var errorobj_min_ln = "Please enter minimum 3 characters";
+        var errorobj_max_ln = "Please enter maximum 15 characters";
+
+        var errorobj_req_ph = "Please enter phone number";
+        var errorobj_min_ph = "Please enter minimum 9 characters";
+        var errorobj_max_ph = "Please enter maximum 15 characters";
+
+        var errorobj_req_sa = "Please enter street address";
+        var errorobj_min_sa = "Please enter minimum 10 characters";
+        var errorobj_max_sa = "Please enter maximum 40 characters";
+
+        var errorobj_req_zc = "Please enter zip code";
+        var errorobj_min_zc = "Please enter minimum 3 characters";
+        var errorobj_max_zc = "Please enter maximum 7 characters";
+
+        var errorobj_req_ct = "Please enter city";
+        var errorobj_min_ct = "Please enter minimum 3 characters";
+        var errorobj_max_ct = "Please enter maximum 15 characters";
+
+        var errorobj_req_st = "Please enter state";
+        var errorobj_min_st = "Please enter minimum 3 characters";
+        var errorobj_max_st = "Please enter maximum 15 characters";
+
+        var errorobj_req_srn = "Please enter notes";
+        var errorobj_min_srn = "Please enter minimum 10 characters";
+        var errorobj_max_srn = "Please enter maximum 70 characters";
+        var errorobj_seo_settings_updated_successfully = "SEO settings updated successfully";
+        var errorobj_Invalid_Image_Type = "Invalid Image Type";
+        var errorobj_you_cannot_book_on_past_date = "You cannot book on past date";
+        var errorobj_please_select_method = "Please Select Method";
+        var errorobj_please_enter_google_calender_ID = "Please enter google calender ID";
+        var errorobj_please_enter_google_calender_client_ID = "Please enter google calender client ID";
+        var errorobj_please_enter_google_calender_client_secret = "Please enter google calender client secret";
+        var errorobj_please_enter_google_calender_frontend_url = "Please%20enter%20google%20calender%20frontend%20url.html";
+        var errorobj_please_enter_google_calender_admin_url = "Please%20enter%20google%20calender%20admin%20url.html";
+        var errorobj_please_enter_secure_key = "Please enter secure key";
+        var errorobj_please_enter_merchant_ID = "Please enter merchant ID";
+    </script>
+    <script src="{% static 'cleanto/assets/js/jquery-ui.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'cleanto/assets/js/jquery.nicescroll.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'cleanto/assets/js/intlTelInput.js' %}" type="text/javascript"></script>
+    <script src="{% static 'cleanto/assets/js/jquery.payment.min.js' %}" type="text/javascript"></script>
+   
+    <!-- **Google - Fonts** -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800" rel="stylesheet">
+    <script src="{% static 'cleanto/assets/js/jquery.validate.min.js' %}"></script>
+    <style>
+        .error {
+            color: red;
+        }
+        
+        #ct,
+        a,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        span,
+        p,
+        div,
+        label,
+        li,
+        ul {
+            font-family: Montserrat !important;
+        }
+    </style>
+    <style>
+        #ct .ct-fixed-background {
+            background: #e1fbfb !important;
+        }
+    </style>
+    <style>
+        /* primary color */
+        
+        .cleanto {
+            color: #2e2e2e !important;
+        }
+        
+        .cleanto .ct-link.ct-mybookings {
+            color: #ffffff !important;
+            background: #49b6e9 !important;
+        }
+        
+        .cleanto .ct-link.ct-mybookings:hover {
+            color: #ffffff !important;
+            background: #4a4a4a !important;
+        }
+        
+        .cleanto .ct-main-left .ct-list-header .ct-logged-in-user a.ct-link,
+        .cleanto .ct-complete-booking-main .ct-link,
+        .cleanto .ct-discount-coupons a.ct-apply-coupon.ct-link {
+            color: #4a4a4a !important;
+        }
+        
+        .cleanto .ct-link:hover,
+        .cleanto .ct-main-left .ct-list-header .ct-logged-in-user a.ct-link:hover,
+        .cleanto .ct-complete-booking-main .ct-link:hover,
+        .cleanto .ct-discount-coupons a.ct-apply-coupon.ct-link:hover {
+            color: #49b6e9 !important;
+        }
+        
+        .cleanto a,
+        .cleanto .ct-link,
+        .cleanto .ct-addon-count .ct-btn-group .ct-btn-text {
+            color: #2e2e2e !important;
+        }
+        
+        .cleanto a.ct-back-to-top i.icon-arrow-up,
+        .cleanto .calendar-wrapper .calendar-header a.next-date:hover .icon-arrow-right:before,
+        .cleanto .calendar-wrapper .calendar-header a.previous-date:hover .icon-arrow-left:before {
+            color: #ffffff !important;
+        }
+        
+        .cleanto .calendar-body .ct-week:hover a span,
+        .cleanto .ct-extra-services-list ul.addon-service-list li .ct-addon-ser:hover .addon-price {
+            color: #ffffff !important;
+        }
+        
+        .cleanto #ct-type-2 .service-selection-main .ct-services-dropdown .ct-service-list:hover,
+        .cleanto #ct-type-method .ct-services-method-dropdown .ct-service-method-list:hover,
+        .cleanto .common-selection-main .common-data-dropdown .data-list:hover {
+            color: #ffffff !important;
+            background: #4a4a4a !important;
+        }
+        
+        .cleanto .selected-is:hover,
+        .cleanto #ct-type-2 .service-is:hover,
+        .cleanto #ct-type-method .service-method-is:hover {
+            border-color: #4a4a4a !important;
+        }
+        
+        .cleanto .ct-extra-services-list ul.addon-service-list li .ct-addon-ser:hover span:before {
+            border-top-color: #4a4a4a !important;
+        }
+        
+        .cleanto .calendar-wrapper .calendar-header a.next-date:hover,
+        .cleanto .calendar-wrapper .calendar-header a.previous-date:hover,
+        .cleanto .calendar-body .ct-week:hover {
+            background: #49b6e9 !important;
+        }
+        
+        .cleanto .calendar-body .ct-show-time .time-slot-container ul li.time-slot {
+            background: #4a4a4a !important;
+        }
+        
+        .cleanto .calendar-body .dates .ct-week.by_default_today_selected.active_today span,
+        .cleanto .calendar-body .ct-show-time .time-slot-container ul li.time-slot,
+        .cleanto .calendar-body .dates .ct-week.active span {
+            color: #ffffff !important;
+        }
+        
+        .cleanto .calendar-header a.previous-date,
+        .cleanto .calendar-header a.next-date {
+            color: #ffffff !important;
+        }
+        
+        .cleanto .ct-custom-checkbox ul.ct-checkbox-list label:hover span,
+        .cleanto .ct-custom-radio ul.ct-radio-list label:hover span {
+            border: 1px solid #49b6e9 !important;
+        }
+        
+        #ct-login .ct-main-forget-password .ct-info-btn,
+        .cleanto button,
+        .cleanto #ct-front-forget-password .ct-front-forget-password .ct-info-btn,
+        .cleanto .ct-button {
+            color: #ffffff !important;
+            background: #4a4a4a !important;
+            border: 2px solid #4a4a4a !important;
+        }
+        
+        .cleanto .ct-display-coupon-code .ct-coupon-value {
+            color: #ffffff !important;
+            background: #49b6e9 !important;
+        }
+        /* for front date legends */
+        
+        .cleanto .calendar-body .ct-show-time .time-slot-container .ct-slot-legends .ct-available-new {
+            background: #4a4a4a !important;
+        }
+        
+        .cleanto .calendar-body .ct-show-time .time-slot-container .ct-slot-legends .ct-selected-new {
+            background: #49b6e9 !important;
+        }
+        /* seconday color */
+        
+        .nicescroll-cursors {
+            background-color: #49b6e9 !important;
+        }
+        
+        .cleanto .calendar-body .dates .ct-week.active,
+        .cleanto .calendar-body .ct-show-time.shown {
+            background: #49b6e9 !important;
+        }
+        /* background color all css  HOVER */
+        
+        .cleanto .ct-selected,
+        .cleanto .ct-selected-data,
+        .cleanto .ct-provider-list ul.provders-list li input[type='radio']:checked + lable span,
+        .cleanto .ct-list-services ul.services-list li input[type='radio']:checked + lable span,
+        .cleanto .ct-extra-services-list ul.addon-service-list li input[type='checkbox']:checked label span,
+        .cleanto .ct-discount-list ul.ct-discount-often li input[type='radio']:checked + .ct-btn-discount,
+        .cleanto #ct-tslots .ct-date-time-main .time-slot-selection-main .time-slot.ct-selected,
+        .cleanto .ct-button:hover,
+        .cleanto-login .ct-main-forget-password .ct-info-btn:hover,
+        .cleanto #ct-front-forget-password .ct-front-forget-password .ct-info-btn:hover,
+        .cleanto input[type='submit']:hover,
+        .cleanto input[type='reset']:hover,
+        .cleanto input[type='button']:hover,
+        .cleanto button:hover {
+            color: #ffffff !important;
+            background: #49b6e9 !important;
+            border-color: #49b6e9 !important;
+        }
+        
+        .cleanto .ct-step-heading {
+            color: #ffffff !important;
+            background: #49b6e9 !important;
+            border-color: #49b6e9 !important;
+        }
+        
+        .cleanto #ct-price-scroll {
+            border-color: #4a4a4a !important;
+            box-shadow: 0px 0px 1px #4a4a4a !important;
+            position: relative;
+        }
+        
+        .cleanto .ct-cart-wrapper .ct-cart-label-total-amount,
+        .cleanto .ct-cart-wrapper .ct-cart-total-amount {
+            color: #49b6e9 !important;
+        }
+        
+        .cleanto .ct-list-services ul.services-list li input[type='radio']:checked + .ct-service,
+        .cleanto .ct-provider-list ul.provders-list li input[type='radio']:checked + .ct-provider,
+        .cleanto .ct-extra-services-list ul.addon-service-list li input[type='checkbox']:checked + .ct-addon-ser {
+            border-color: #49b6e9 !important;
+            box-shadow: 0 0 10px 1px #49b6e9 !important;
+        }
+        
+        .cleanto .ct-extra-services-list ul.addon-service-list li input[type='checkbox']:checked + .ct-addon-ser span:before {
+            border-top-color: #49b6e9 !important;
+        }
+        
+        .cleanto .ct-extra-services-list ul.addon-service-list li input[type='checkbox']:checked + .ct-addon-ser .addon-price {
+            color: #ffffff !important;
+        }
+        
+        .cleanto .border-c:hover,
+        .cleanto .ct-list-services ul.services-list li .ct-service:hover,
+        .cleanto .ct-list-services ul.addon-service-list li .ct-addon-ser:hover,
+        .cleanto #ct-meth-unit-type-2.ct-meth-unit-count .bedroom-box .ct-bedroom-btn:hover,
+        .cleanto #ct-meth-unit-type-2.ct-meth-unit-count .bathroom-box .ct-bathroom-btn:hover,
+        .cleanto #ct-duration-main.ct-service-duration .ct-duration-list .duration-box .ct-duration-btn:hover,
+        .cleanto .ct-extra-services-list .ct-addon-extra-count .ct-common-addon-list .ct-addon-box .ct-addon-btn:hover,
+        .cleanto .ct-discount-list ul.ct-discount-often li .ct-btn-discount:hover,
+        .cleanto .ct-custom-radio ul.ct-radio-list label:hover span,
+        .cleanto .ct-custom-checkbox ul.ct-checkbox-list label:hover span {
+            border-color: #4a4a4a !important;
+        }
+        
+        .cleanto .ct-custom-checkbox ul.ct-checkbox-list input[type='checkbox']:checked + label span {
+            border: 1px solid #49b6e9 !important;
+            background: #49b6e9 !important;
+        }
+        
+        .cleanto .ct-custom-radio ul.ct-radio-list input[type='radio']:checked + label span {
+            border: 5px solid #49b6e9 !important;
+        }
+        
+        .cleanto #ct-meth-unit-type-2.ct-meth-unit-count .bedroom-box .ct-bedroom-btn.ct-bed-selected,
+        .cleanto #ct-meth-unit-type-2.ct-meth-unit-count .bathroom-box .ct-bathroom-btn.ct-bath-selected,
+        .cleanto #ct-duration-main.ct-service-duration .ct-duration-list .duration-box .ct-duration-btn.duration-box-selected,
+        .cleanto .ct-extra-services-list .ct-addon-extra-count .ct-common-addon-list .ct-addon-box .ct-addon-selected {
+            background: #49b6e9 !important;
+            color: #ffffff !important;
+            border-color: #49b6e9 !important;
+        }
+        
+        .cleanto .ct-button.ct-btn-abs,
+        .cleanto .calendar-header,
+        .cleanto .panel-login .panel-heading .col-xs-6,
+        .cleanto a.ct-back-to-top {
+            background-color: #4a4a4a !important;
+        }
+        
+        .cleanto a.ct-back-to-top:hover,
+        .cleanto .weekdays {
+            background-color: #49b6e9 !important;
+        }
+        
+        .cleanto .calendar-body .dates .ct-week.by_default_today_selected {
+            background-color: #4a4a4a !important;
+        }
+        
+        .cleanto .calendar-body .dates .ct-week.by_default_today_selected a span {
+            color: #ffffff !important;
+        }
+        
+        .cleanto .calendar-body .dates .ct-week.selected_date.active {
+            background-color: #49b6e9 !important;
+            border-bottom: thin solid #49b6e9 !important;
+        }
+        
+        .cleanto .calendar-body .ct-show-time .time-slot-container ul li.time-slot:hover,
+        .cleanto .calendar-body .ct-show-time .time-slot-container ul li.time-slot.ct-booked,
+        .cleanto .calendar-body .ct-show-time.shown {
+            background-color: #49b6e9 !important;
+        }
+        
+        .cleanto #ct-meth-unit-type-2.ct-meth-unit-count .bedroom-box .ct-bedroom-btn.ct-bed-selected,
+        .cleanto #ct-meth-unit-type-2.ct-meth-unit-count .bathroom-box .ct-bathroom-btn.ct-bath-selected,
+        .cleanto #ct-duration-main.ct-service-duration .ct-duration-list .duration-box .ct-duration-btn.duration-box-selected,
+        .cleanto .ct-extra-services-list .ct-addon-extra-count .ct-common-addon-list .ct-addon-box .ct-addon-selected {
+            /* background: #49b6e9 !important; */
+        }
+        /* hover inputs */
+        
+        .cleanto input[type='text']:hover,
+        .cleanto input[type='password']:hover,
+        .cleanto input[type='email']:hover,
+        .cleanto input[type='url']:hover,
+        .cleanto input[type='tel']:hover,
+        .cleanto input[type='number']:hover,
+        .cleanto input[type='range']:hover,
+        .cleanto input[type='date']:hover,
+        .cleanto textarea:hover,
+        .cleanto select:hover,
+        .cleanto input[type='search']:hover,
+        .cleanto input[type='submit']:hover,
+        .cleanto input[type='button']:hover {
+            border-color: #4a4a4a !important;
+        }
+        /* Focus inputs */
+        
+        .cleanto input[type='text']:focus,
+        .cleanto input[type='password']:focus,
+        .cleanto input[type='email']:focus,
+        .cleanto input[type='url']:focus,
+        .cleanto input[type='tel']:focus,
+        .cleanto input[type='number']:focus,
+        .cleanto input[type='range']:focus,
+        .cleanto input[type='date']:focus,
+        .cleanto textarea:focus,
+        .cleanto select:focus,
+        .cleanto input[type='search']:focus,
+        .cleanto input[type='submit']:focus,
+        .cleanto input[type='button']:focus {
+            border-color: #49b6e9 !important;
+            /* box-shadow: 0 0 0 1.5px #49b6e9 inset !important; */
+        }
+        
+        .cleanto .ct-tooltip-link {
+            color: #49b6e9 !important;
+        }
+        /* for custom css option */
+        
+        .cleanto .ct_method_tab-slider--nav .ct_method_tab-slider-tabs {
+            background: #4a4a4a !important;
+        }
+        
+        .cleanto .ct_method_tab-slider--nav .ct_method_tab-slider-tabs:after {
+            background: #49b6e9 !important;
+        }
+        
+        .cleanto .ct_method_tab-slider--nav .ct_method_tab-slider-trigger {
+            color: #ffffff !important;
+        }
+        
+        .cleanto .ct_method_tab-slider--nav .ct_method_tab-slider-trigger.active {
+            color: #ffffff !important;
+        }
+    </style>
+    <script>
+        jQuery(document).ready(function() {
+            var $sidebar = jQuery("#ct-price-scroll"),
+                $window = jQuery(window),
+                offset = $sidebar.offset(),
+                topPadding = 250;
+            fulloffset = jQuery("#ct").offset();
+
+            $window.scroll(function() {
+                var color = jQuery('#color_box').val();
+                jQuery("#ct-price-scroll").css({
+                    'box-shadow': '0px 0px 1px ' + color + '',
+                    'position': 'absolute'
+                });
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function myFunction() {
+            var input = document.getElementById('coupon_val')
+            var div = document.getElementById('display_code');
+            div.innerHTML = input.value;
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="ct-wrapper cleanto" id="ct">
+        <!-- main wrapper -->
+        <div class="ct-fixed-background"></div>
+        <!-- loader -->
+        <div class="ct-loading-main">
+            <div class="loader">Loading...</div>
+        </div>
+
+        <div class="ct-main-wrapper">
+            <div class="container">
+                <!-- left side main booking form -->
+
+                <div class="ct-main-left container">
+                    <div class="ct-sm-12 ct-md-12 ta-c ct-location-header">
+
+                        <div id="ct-logo">
+                            <a href="{% url 'index' %}">
+                                <img style="max-height: 300px; max-width: 300px;" src="{% static 'cleanto/assets/images/services/company_38045.jpg' %}" />
+                            </a>
+                        </div>
+                        <h2 class="header2">Drymaster Carpet Cleaning</h2>
+
+                        
+                        <a class="ct-link ct-mybookings" target="_blank" href="{% url 'order-summary' %}">My Bookings</a>
+                    </div>
+
+                    <!-- end area based -->
+                    <div class="ct-list-services ct-common-box fl hide_allsss">
+                        <div class="ct-list-header">
+                            <h3 class="header3">My Cart                                              </h3>
+
+                            
+                            <label class="service_not_selected_error" id="service_not_selected_error"></label>
+                        </div>
+                        <input id="total_cart_count" type="hidden" name="total_cart_count" value='1' />
+                        <!-- area based select cleaning -->
+                        <!-- 1.box style services selection radio selection -->
+                        <main class="mt-5 pt-4">
+                                <div class="mt-5 pt-4">
+                                        {% if messages %}
+                                            {% for message in messages %}
+                                            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                              {{ message }}
+                                              
+                                              </button>
+                                            </div>
+                                            {% endfor %}
+                                        {% endif %}
+                                        </div>
+                            <div class="container dark-grey-text mt-5">
+                        
+                              <!--Grid row-->
+                              <div class="row wow fadeIn">
+                        
+                                <!--Grid column-->
+                                <div class="col-md-6 mb-4">
+                        
+                                        <img class="ct-image" src="{% static 'cleanto/assets/images/services/service_49493.png' %}" />
+                        
+                                </div>
+                                <!--Grid column-->
+                        
+                                <!--Grid column-->
+                                <div class="col-md-6 mb-4">
+                        
+                                  <!--Content-->
+                                  <div class="p-4">
+                        
+                                    <div class="mb-3">
+                                      <a href="">
+                                        <span class="badge purple mr-1">{{ object.get_category_display }}</span>
+                                      </a>
+                                      
+                                    </div>
+                        
+                                    <p class="lead">
+                                        {% if object.discount_price %}
+                                        <span class="mr-1">
+                                          <del>${{ object.price }}</del>
+                                        </span>
+                                        <span>${{ object.discount_price }}</span>
+                                        {% else %}
+                                        <span>${{ object.price }}</span>
+                                        {% endif %}
+                                      </p>
+                                   
+                        
+                                    <!-- <form class="d-flex justify-content-left"> -->
+                                      <!-- Default input -->
+                                      
+                                      <a href="{{ object.get_add_to_cart_url }}" class="btn btn-primary btn-md my-0 p" >Add to cart
+                                        <i class="fas fa-shopping-cart ml-1"></i>
+                                      </a>
+                                      <a href="{{ object.get_remove_from_cart_url }}" class="btn btn-danger btn-md my-0 p" >Remove from cart 
+                                           
+                                    </a>
+                        
+                                    <!-- </form> -->
+                        
+                                  </div>
+                                  <!--Content-->
+                        
+                                </div>
+                                <!--Grid column-->
+                        
+                              </div>
+                              <!--Grid row-->
+                        
+                              <hr>
+                        
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
