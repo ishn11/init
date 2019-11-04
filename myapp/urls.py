@@ -2,6 +2,7 @@ from django.urls import path
 
 from django.views.generic import TemplateView
 from .views import (
+    AddCouponView,
     AddCommentView,
     ItemDetailView,
     CheckoutView,
@@ -97,7 +98,8 @@ urlpatterns = [
     path('order-summary/', OrderSummaryView.as_view(), name='order-summary'),
 
     path('remove-item-from-cart/<slug>/', remove_single_item_from_cart,
-         name='remove-single-item-from-cart')
+         name='remove-single-item-from-cart'),
+    path('add-coupon/', AddCouponView.as_view(), name='add-coupon'),
 
 
 ]

@@ -655,7 +655,7 @@
 <body>
     <div class="ct-wrapper cleanto" id="ct">
         <!-- main wrapper -->
-        <div class="ct-fixed-background"></div>
+        <div class="ct-fixed-background">
         <!-- loader -->
         <div class="ct-loading-main">
             <div class="loader">Loading...</div>
@@ -665,7 +665,8 @@
             <div class="container">
                 <!-- left side main booking form -->
 
-                <div class="ct-main-left container">
+                <div class="ct-main-left ct-sm-10 ct-md-10 ct-xs-12 mt-30 br-5 np">
+                    <div class="ct-main-left container">
                     <div class="ct-sm-12 ct-md-12 ta-c ct-location-header">
 
                         <div id="ct-logo">
@@ -691,32 +692,59 @@
                             <p class="ct-sub">Choose your service and property size</p>
                             <label class="service_not_selected_error" id="service_not_selected_error"></label>
                         </div>
-                        <input id="total_cart_count" type="hidden" name="total_cart_count" value='1' />
-                        <!-- area based select cleaning -->
-                        <!-- 1.box style services selection radio selection -->
-                        {% for item in object_list %}
-                        <ul class="services-list">
-                            <li class='ct-sm-6 ct-md-4 ct-lg-3 ct-xs-12 remove_service_class ser_details' data-servicetitle="Carpet Cleaning (Houses)" data-id="3">
-                                <input type="radio" name="service-radio" id="ct-service-3" class="make_service_disable" />
-                                <label class="ct-service border-c" for="ct-service-3">
-                                    <div class="ct-service-img"><img class="ct-image" src="{% static 'cleanto/assets/images/services/service_49493.png' %}" />
-                                        <a href="{{ item.get_absolute_url }}"></a>
-                                    </div>
-                                    
+                        
+                                <!-- area based select cleaning -->
+                                <!-- 1.box style services selection radio selection -->
+                                <ul class="services-list">
 
-                                </label>
-
-                                <h5>
-                                    <strong>
-                                      <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.get_category_display }}
+                                    {% for item in object_list %}
                                         
-                                      </a>
-                                    </strong>
-                                  </h5>
+                                            <!-- <li class='ct-sm-6 ct-md-4 ct-lg-3 ct-xs-12 remove_service_class ser_details' data-servicetitle="Carpet Cleaning (Houses)" data-id="3">
+                                                <input type="radio" name="service-radio" id="ct-service-3" class="make_service_disable" />
+                                                <label class="ct-service border-c" for="ct-service-3">
+                                                        <img src="{{ item.image.url }}" class="card-img-top"> -->
+                                                    <!-- <div class="ct-service-img"><img class="ct-image"  src="{{ item.image.url }}" />
+                                                        <a href="{{ item.get_absolute_url }}"></a>
+                                                    </div>
+                                                    
+                
+                                                </label>
+                
+                                                <h5>
+                                                    <strong>
+                                                    <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.get_category_display }}
+                                                        
+                                                    </a>
+                                                    </strong>
+                                                </h5>
+                
+                                            </li> -->
+                                            <li class='ct-sm-6 ct-md-4 ct-lg-3 ct-xs-12 remove_service_class ser_details' data-servicetitle="Carpet Cleaning (Houses)" data-id="3">
+                                                    <input type="radio" name="service-radio" id="ct-service-3" class="make_service_disable" />
+                                                    <label class="ct-service border-c" for="ct-service-3">
+                                                        <div class="ct-service-img"><img class="ct-image" src="{{ item.image.url }}" />
+                                                            <a href="{{ item.get_absolute_url }}"></a>
+                                                        </div>
+                    
+                                                    </label>
+                    
+                                                    <h6>
+                                                        <strong>
+                                                    <a href="{{ item.get_absolute_url }}" class="service-name fl ta-c">{{ item.get_category_display }}</a>
+                    
+                                                
+                                                        </strong>
+                                                        </h6>
+                                                </li>
 
-                            </li>
-                        </ul>
-                        {% endfor %}
+                                        
+                                    {% endfor %}
+                                </ul> 
+                </div>
+                                
+                
+        </div>
+                       
                     </div>
                 </div>
             </div>

@@ -685,16 +685,16 @@
 
                     <!-- end area based -->
                     <div class="ct-list-services ct-common-box fl hide_allsss">
-                        <div class="ct-list-header">
+                        <!-- <div class="ct-list-header">
                             <h3 class="header3">Choose service                                              </h3>
 
                             <p class="ct-sub">Choose your service and property size</p>
                             <label class="service_not_selected_error" id="service_not_selected_error"></label>
-                        </div>
-                        <input id="total_cart_count" type="hidden" name="total_cart_count" value='1' />
+                        </div> -->
+                        <!-- <input id="total_cart_count" type="hidden" name="total_cart_count" value='1' /> -->
                         <!-- area based select cleaning -->
                         <!-- 1.box style services selection radio selection -->
-                        {% for item in object_list %}
+                        <!-- {% for item in object_list %}
                         <ul class="services-list">
                             <li class='ct-sm-6 ct-md-4 ct-lg-3 ct-xs-12 remove_service_class ser_details' data-servicetitle="Carpet Cleaning (Houses)" data-id="3">
                                 <input type="radio" name="service-radio" id="ct-service-3" class="make_service_disable" />
@@ -716,7 +716,7 @@
 
                             </li>
                         </ul>
-                        {% endfor %}
+                        {% endfor %} -->
                         <!-- <ul class="services-list">
                             <li class='ct-sm-6 ct-md-4 ct-lg-3 ct-xs-12 remove_service_class ser_details' data-servicetitle="Carpet Cleaning (Houses)" data-id="3">
                                 <input type="radio" name="service-radio" id="ct-service-3" class="make_service_disable" />
@@ -931,34 +931,179 @@
                             </div>
                             <input type="hidden" id="color_box" data-id="#49b6e9" value="#49b6e9" />
 
-                           <form method='POST'>  
+                        <form method="POST" class="card-body">
+                                {% csrf_token %}
+                                    <div class="ct-peronal-details">
+                                    <div class="ct-md-6 ct-sm-6 ct-xs-12 ct-form-row remove_guest_user_preferred_email show-error" style="display: block;">
+                                        <label for="ct-email-guest">Street Address </label>
+                                        {{ form.street_address }}
+                                        <!-- <input type="text" name="ct_email_guest" class="add_show_error_class show-error" id="ct-email-guest" placeholder="Your valid email address"> -->
+                                    </div>
+                                    <div class="ct-md-6 ct-sm-6 ct-xs-12 ct-form-row">
+                                        <label for="ct-first-name">Apartment </label>
+                                        {{ form.apartment_address }}
+                                        <!-- <input type="text" name="ct_first_name" class="add_show_error_class error" id="ct-first-name" placeholder="Your First Name"> -->
+                                    </div>
+                                    <div class="ct-md-6 ct-sm-6 ct-xs-12 ct-form-row">
+                                        <label for="ct-last-pass">Country</label>
+                                        {{ form.country }}
+                                        <!-- <input type="text" class="add_show_error_class error" name="ct_last_name" id="ct-last-name" placeholder="Your Last Name"> -->
+                                    </div>
+                                    <div class="ct-md-6 ct-sm-6 ct-xs-12 ct-form-row">
+                                        <label for="ct-user-phone">Zip</label>
+                                        {{ form.zip }}
+                                        <!-- <div class="intl-tel-input"><div class="flag-container"><div tabindex="0" class="selected-flag" title="Australia: +61"><div class="iti-flag au"></div><div class="iti-arrow"></div></div><ul class="country-list hide"><li class="country active" data-dial-code="61" data-country-code="au"><div class="flag-box"><div class="iti-flag au"></div></div><span class="country-name">Australia</span><span class="dial-code">+61</span></li></ul></div><input type="tel" value="" id="ct-user-phone" class="add_show_error_class error" name="ct_user_phone" autocomplete="off" placeholder="0412 345 678"></div> -->
+                                    </div>
+                                    <!-- <div class="ct-md-6 ct-sm-6 ct-xs-12 ct-form-row">
+                                        <label for="ct-street-address">Street Address</label>
+                                        
+                                        <!-- <input type="text" name="ct_street_address" id="ct-street-address" class="add_show_error_class error" placeholder="e.g. George Street"> -->
+                                    <!-- </div>
+                                    <div class="ct-md-6 ct-sm-6 ct-xs-12 ct-form-row remove_zip_code_class">
+                                        <label for="ct-zip-code">Zip Code</label>
+                                        <input type="text" name="ct_zip_code" id="ct-zip-code" class="add_show_error_class error" placeholder="e.g. 2000">
+                                    </div>
+                                    <div class="ct-md-6 ct-sm-6 ct-xs-12 ct-form-row remove_city_class">
+                                        <label for="ct-city">City</label>
+                                        <input type="text" name="ct_city" id="ct-city" class="add_show_error_class error" placeholder="eg. Sydney">
+                                    </div>
+                                    <div class="ct-md-6 ct-sm-6 ct-xs-12 ct-form-row remove_state_class">
+                                        <label for="ct-state">State</label>
+                                        <input type="text" name="ct_state" id="ct-state" class="add_show_error_class error" placeholder="eg. NSW">
+                                    </div> -->
+                                    <!-- <div class="ct-md-12 ct-xs-12 ct-form-row">
+                                        <label for="ct-notes">Special requests ( Notes )</label>
+                                        <textarea id="ct-notes" class="add_show_error_class error" rows="10"></textarea>
+                                    </div> -->
+                                    <div class="custom-control custom-checkbox">
+                                            <input {% if form.same_shipping_address.value %}checked{% endif %} type="checkbox" class="custom-control-input" name="same_billing_address" id="same-address">
+                                            <!-- <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label> -->
+                                          </div>
+                                          <!-- <div class="custom-control custom-checkbox">
+                                            <input {% if form.save_info.value %}checked{% endif %} type="checkbox" class="custom-control-input" name="save_info" id="save-info">
+                                            <label class="custom-control-label" for="save-info">Save this information for next time</label>
+                                          </div>
+                            
+                                          <hr> -->
+                            
+                                          <!-- <div class="ct-custom-radio ct-options-new ct-md-6 ct-sm-6 ct-xs-12 mb-10">
+                                            {% for value, name in form.fields.payment_option.choices %}
+                                            <div class="custom-control custom-radio">
+                                              <input id="{{ name }}" name="payment_option" value="{{ value }}" type="radio" class="custom-control-input" required>
+                                              <label class="custom-control-label" for="{{ name }}">{{ name }}</label>
+                                              <!-- {% comment %} {{ form.payment_option }} {% endcomment %} -->
+                                            <!-- </div>
+                                            {% endfor %} --> 
+                                            <!-- <div class="custom-control custom-radio">
+                                              <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                                              <label class="custom-control-label" for="paypal">Paypal</label>
+                                            </div>
+                                          </div> -->
+
+                                    <!-- <div class="ct-custom-radio ct-options-new ct-md-6 ct-sm-6 ct-xs-12 mb-10">
+                                        <label>Do you have parking?</label>
+                                        
+                                        <ul class="ct-radio-list">
+                                            <li>
+                                                <input id="parking-yes" type="radio" checked="checked" class="input-radio p_status" name="parking" value="Parking-Yes">
+                                                <label for="parking-yes"><span></span>Yes</label>
+                                            </li>
+                                            <li>
+                                                <input id="parking-no" type="radio" class="input-radio p_status" name="parking" value="Parking-No">
+                                                <label for="parking-no"><span></span>No</label>
+                                            </li>
+
+                                        </ul>
+                                    </div> -->
+                                <!-- </form> -->
+
+                                <div class="ct-md-12 ct-xs-12 ct-form-row np">
+                                        <h3 class="header3 pull-left">Appointment Details</h3>
+                                        <div class="pull-left ml-10 mt-5">
+                                            <div class="ct-custom-checkbox">
+                                                <ul class="ct-checkbox-list">
+                                                    <li>
+                                                        <!-- <input type="checkbox" id="retype_status"> -->
+                                                        <label for="retype_status" class="">
+                                                            (Same As Above) &nbsp;<span></span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="cb"></div>
+
+                                        <div class="ct-md-12 ct-xs-12 ct-form-row">
+                                            <label for="app-notes">Appointment Address</label>
+                                            {{ form.street_address }}
+                                            <!-- <input type="text" id="app-street-address" name="app_street_address" class="add_show_error_class error" placeholder="e.g. George Street"> -->
+                                        </div>
+
+                                        <div class="ct-md-4 ct-sm-4 ct-xs-12 ct-form-row">
+                                            <label for="app-zip-code">Appointment Post Code</label>
+                                            {{ form.zip }}
+                                            <!-- <input type="text" name="app_zip_code" id="app-zip-code" class="add_show_error_class error" placeholder="e.g. 2000"> -->
+                                        </div>
+
+                                        <div class="ct-md-4 ct-sm-4 ct-xs-12 ct-form-row">
+                                            <label for="app-city">Appointment City</label>
+                                            {{ form.apartment_address }}
+                                            <!-- <input type="text" name="app_city" id="app-city" class="add_show_error_class error" placeholder="eg. Sydney"> -->
+                                        </div>
+
+                                        <div class="ct-md-4 ct-sm-4 ct-xs-12 ct-form-row">
+                                            <label for="app-state">Appointment Country</label>
+                                            {{ form.country }}
+                                            <!-- <input type="text" name="app_state" id="app-state" class="add_show_error_class error" placeholder="eg. NSW"> -->
+                                        </div>
+
+                                    </div>
+                                    <h3> Payment Option  </h3>
+                                    <div class="ct-custom-radio ct-options-new ct-md-6 ct-sm-6 ct-xs-12 mb-10">
+                                            {% for value, name in form.fields.payment_option.choices %}
+                                            <div class="custom-control custom-radio">
+                                              <input id="{{ name }}" name="payment_option" value="{{ value }}" type="radio" class="custom-control-input" required>
+                                              <label class="custom-control-label" for="{{ name }}">{{ name }}</label>
+                                              <!-- {% comment %} {{ form.payment_option }} {% endcomment %} -->
+                                            </div>
+                                            <hr>
+                                            {% endfor %}
+                                    </div>
+
+                                        
+
+                                    </div>
+
+                                </div>
+                                <!-- <form method='POST'>  
                                     {% csrf_token %}
-                                    {{ form|crispy }}
-                                    <button class='btn btn-primary' type='submit'>Checkout</button>
+                                    {{ form|crispy }} -->
+                                    <!-- <a href="javascript:void(0)" type='submit' data-currency_symbol="$" id='complete_bookings' class="ct-button ct-btn-big ct_remove_id">Complete Booking</a> -->
+                                    <button class="ct-button ct-btn-big ct_remove_id" type='submit'>Checkout</button>
                             </form> 
 
-                            <form method="POST" class="card-body">
-                                    {% csrf_token %}
+                            <!-- <form method="POST" class="card-body">
+                                    {% csrf_token %} -->
                       
                                     <!--address-->
-                                    <div class="md-form mb-5">
+                                    <!-- <div class="md-form mb-5">
                                       {% comment %} <input type="text" id="address" class="form-control" placeholder="1234 Main St"> {% endcomment %}
                                       {{ form.street_address }}
                                       <label for="address" class="">Address</label>
-                                    </div>
+                                    </div> -->
                       
                                     <!--address-2-->
-                                    <div class="md-form mb-5">
+                                    <!-- <div class="md-form mb-5">
                                       {% comment %} <input type="text" id="address-2" class="form-control" placeholder="Apartment or suite"> {% endcomment %}
                                       {{ form.apartment_address }}
                                       <label for="address-2" class="">Address 2 (optional)</label>
                                     </div>
-                      
+                       -->
                                     <!--Grid row-->
-                                    <div class="row">
+                                    <!-- <div class="row"> -->
                       
                                       <!--Grid column-->
-                                      <div class="col-lg-4 col-md-12 mb-4">
+                                      <!-- <div class="col-lg-4 col-md-12 mb-4">
                       
                                         <label for="country">Country</label>
                                         {% comment %} <select class="custom-select d-block w-100" id="country" required>
@@ -970,11 +1115,11 @@
                                           Please select a valid country.
                                         </div>
                       
-                                      </div>
+                                      </div> -->
                                       <!--Grid column-->
                       
                                       <!--Grid column-->
-                                      <div class="col-lg-4 col-md-6 mb-4">
+                                      <!-- <div class="col-lg-4 col-md-6 mb-4">
                       
                                         <label for="zip">Zip</label>
                                         {% comment %} <input type="text" class="form-control" id="zip" placeholder="" required> {% endcomment %}
@@ -983,13 +1128,13 @@
                                           Zip code required.
                                         </div>
                       
-                                      </div>
+                                      </div> -->
                                       <!--Grid column-->
                       
-                                    </div>
+                                    <!-- </div> -->
                                     <!--Grid row-->
                       
-                                    <hr>
+                                    <!-- <hr>
                       
                                     <div class="custom-control custom-checkbox">
                                       <input {% if form.same_shipping_address.value %}checked{% endif %} type="checkbox" class="custom-control-input" name="same_billing_address" id="same-address">
@@ -1017,24 +1162,38 @@
                                     </div>
                       
                                     <hr class="mb-4">
-                                    <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+                                    <button class="ct-button ct-btn-big ct_remove_id" type="submit">Continue to checkout</button>
                       
                                   </form>
                       
-                                </div>
+                                </div> -->
                         <!-- </div> -->
                         <!-- main details end -->
                     <!-- </div> -->
                     <!-- end personal details -->
                     <!-- payment details -->
+                    </div>
+                
 
                     <div class="ct-payment-main ct-common-box hide_allsss">
                         <!-- Promocodes -->
                         <div class="ct-discount-coupons ct-md-12">
                             <div class="ct-form-rown">
                                 <div class="ct-coupon-input ct-md-6 ct-sm-12 ct-xs-12 mt-10 mb-15 np">
-                                    <input id="coupon_val" type="text" name="coupon_apply" class="ct-coupon-input-text hide_coupon_textbox" placeholder="Use code: DRY10 for 10% off your booking!" maxlength="22" onchange="myFunction()" />
-                                    <a href="javascript:void(0);" class="ct-apply-coupon ct-link hide_coupon_textbox" name="apply-coupon" id="apply_coupon">Apply</a>
+                                        {% if DISPLAY_COUPON_FORM %}
+                                        <form action="{% url 'add-coupon' %}" method="POST">
+                                                {% csrf_token %}
+                                                {{ couponform.code }}
+                                        <!-- <input id="coupon_val" type="text" name="coupon_apply" class="ct-coupon-input-text hide_coupon_textbox" placeholder="Use code: DRY10 for 10% off your booking!" maxlength="22" onchange="myFunction()" /> -->
+                                    
+                                                <div class="input-group-append">
+                                                <button class="btn btn-secondary btn-md waves-effect m-0" type="submit">Redeem</button>
+                                                
+                                                </div>
+                                            </div>
+                                        </form>
+                                        {% endif %}
+                                    <!-- <a href="javascript:void(0);" class="ct-apply-coupon ct-link hide_coupon_textbox" name="apply-coupon" id="apply_coupon">Apply</a> -->
                                     <label class="ct-error ofh coupon_invalid_error"></label>
                                     <!-- display coupon -->
                                     <div class="ct-display-coupon-code">
@@ -1147,7 +1306,10 @@
 
                     </div>
                     <!-- end payment detials -->
+                <!-- </div> -->
                 </div>
+            </div>
+
                 <!-- left side end -->
 
                 <!-- right side cart -->
@@ -1157,7 +1319,78 @@
                             <div class="ct-step-heading">
                                 <h3 class="header3">Booking Summary</h3></div>
                             <div class="ct-cart-wrapper f-l" id="">
-                                <div class="ct-summary hideservice_name">
+                                    <div class="ct-form-rown ct-addons-list-main">
+                                            <div class="step_heading f-l">
+                                                <h6 class="header6 ct-item-list">Your Cart Items</h6>
+                                            </div>
+                                    <!-- <h4 class="d-flex justify-content-between align-items-center mb-3"> -->
+                                            <!-- <span class="text-muted">Your cart</span> -->
+                                            <span class="badge badge-secondary badge-pill">Number of Items - {{ order.items.count }}</span>
+                                            
+                                            
+                                            
+                                            
+                                            <ul class="ct-addon-items-list-main cart_service_item_listing">
+                                                {% for order_item in order.items.all %}
+                                                    <li class="cart_service_item_listing_li">
+                                                        <div>
+                                                        <h4 class="cart_toggle_head">{{ order_item.quantity }} x {{ order_item.item.title}}</h6>
+                                                        <small class="text-muted">{{ order_item.item.description}}</small>
+                                                        <div class="ct-form-rown ct-cart-border-top">
+                                                                <div class="ct-cart-label-common ofh">Sub Total</div>
+                                                                <div class="ct-cart-amount-common ofh">
+                                                                    <span class="ct-sub-total cart_sub_total">${{ order_item.get_final_price }}</span>
+                                                                </div>
+                                                                </div>
+                                                    </li>
+                                                
+                                                {% endfor %}
+                                            
+
+
+
+                                            
+                                            </ul>
+                                            {% if order.coupon %}
+                                                <div class="ct-form-rown coupon_display">
+                                                        <div class="ct-cart-label-common ofh">Coupon Discount</div>
+                                                        <div class="ct-cart-amount-common ofh">
+                                                                <small>{{ order.coupon.code }}</small>
+                                                            </div>
+                                                            <span class="ct-coupon-discount cart_discount">-${{ order.coupon.amount }}</span>
+                                                            
+                                                        </div>
+                                                    </div> 
+                                                    <div class="ct-form-rown">
+                                                            <div class="ct-cart-label-total-amount ofh">Total</div>
+                                                            <div class="ct-cart-total-amount ofh">
+                                                                <span class="ct-total-amount cart_total">${{ order.get_total }}</span>
+                                                            </div>
+                                                        </div> 
+                                            {% endif %} 
+                                            
+                                            
+                                        
+                                            
+                                            <!-- <form class="card p-2" action="{% url 'add-coupon' %}" method="POST">
+                                                {% csrf_token %}
+                                                <div class="input-group">
+                                                    {{ couponform.code }}
+                                                    <div class="input-group-append">
+                                                    <button class="btn btn-secondary btn-md waves-effect m-0" type="submit">Redeem</button>
+                                                    </div>
+                                                </div>
+                                            </form> -->
+                                            <div class="ct-form-rown">
+                                                    <div class="minimum_amount_error ofh" style="color:red;"> PLEASE NOTE OUR MINIMUM CHARGE IS $105.00</div>
+                
+                                                </div> 
+                                            
+                                        </ul>
+                                        
+                                        
+                                  
+                                <!-- <div class="ct-summary hideservice_name">
                                     <div class="ct-image">
                                         <img src="{% static 'cleanto/assets/images/icon-service.png' %}" alt="">
                                     </div>
@@ -1188,38 +1421,38 @@
                                             <div id="cart_toggle_content_1" style="overflow:hidden;" class="cart_toggle_content">
                                                 <ul class="ct-addon-items-list cart_item_listing">
 
-                                                </ul>
-                                            </div>
+                                                </ul> -->
+                                            <!-- </div> -->
 
-                                        </li-->
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="ct-form-rown ct-cart-border-top">
+                                            <!-- </li> -->
+                                        <!-- </ul> -->
+                                    <!-- </div> -->
+                                <!-- </div> -->
+                                <!-- <div class="ct-form-rown ct-cart-border-top">
                                     <div class="ct-cart-label-common ofh">Sub Total</div>
                                     <div class="ct-cart-amount-common ofh">
                                         <span class="ct-sub-total cart_sub_total"></span>
                                     </div>
-                                </div>
-                                <div class="ct-form-rown coupon_display">
+                                </div> -->
+                                <!-- <div class="ct-form-rown coupon_display">
                                     <div class="ct-cart-label-common ofh">Coupon Discount</div>
                                     <div class="ct-cart-amount-common ofh">
                                         <span class="ct-coupon-discount cart_discount"></span>
                                     </div>
-                                </div>
-                                <div class="ct-clear"></div>
+                                </div> -->
+                                <!-- <div class="ct-clear"></div>
                                 <div id="ct-line"></div>
                                 <div class="ct-form-rown">
                                     <div class="ct-cart-label-total-amount ofh">Total</div>
                                     <div class="ct-cart-total-amount ofh">
                                         <span class="ct-total-amount cart_total"></span>
                                     </div>
-                                </div>
+                                </div> -->
 
-                                <div class="ct-form-rown">
+                                <!-- <div class="ct-form-rown">
                                     <div class="minimum_amount_error ofh" style="color:red;"> PLEASE NOTE OUR MINIMUM CHARGE IS $105.00</div>
 
-                                </div>
+                                </div> -->
 
                                 <div class="ct-clear"></div>
                                 <!-- discount coupons -->
@@ -1276,69 +1509,36 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                
                 <!-- right side card end -->
 
                 <!-- conditions and complete booking details -->
-                <div class="ct-complete-booking-main ct-sm-7 ct-md-7 mb-30 ct-xs-12 hide_allsss">
+                <!-- <div class="ct-complete-booking-main ct-sm-7 ct-md-7 mb-30 ct-xs-12 hide_allsss">
 
                     <div class="ct-list-header">
 
                         <p class="ct-sub-complete-booking"></p>
-                    </div>
+                    </div> -->
 
-                    <div class="ta-center fl">
+                    <!-- <div class="ta-center fl">
                         <div class="ct-loading-main-complete_booking">
                             <div class="loader">Loading...</div>
                         </div>
 
                         <a href="javascript:void(0)" type='submit' data-currency_symbol="$" id='complete_bookings' class="ct-button ct-btn-big ct_remove_id">Complete Booking</a>
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div> -->
 
                 </form>
                 <a href="javascript:void(0)" class="ct-back-to-top br-2"><i class="icon-arrow-up icons"></i></a>
             </div>
             <!-- end container -->
         </div>
+        
 
         <!-- forget password -->
-        <div class="main">
-            <div id="ct-front-forget-password">
-
-                <div class="vertical-alignment-helper">
-                    <div class="vertical-align-center">
-                        <div class="ct-front-forget-password visible">
-                            <div class="form-container">
-                                <div class="tab-content">
-                                    <form id="forget_pass" name="" method="POST">
-                                        <h1 class="forget-password">Reset Password</h1>
-                                        <h4>Enter your email and we'll send you instructions on resetting your password.</h4>
-
-                                        <div class="form-group fl mt-15">
-                                            <label for="userEmail"><i class="icon-envelope-alt"></i>Email</label>
-                                            <input type="email" class="add_show_error_class error" id="rp_user_email" name="rp_user_email" placeholder="Registered Email">
-                                        </div>
-                                        <label class="forget_pass_correct"></label>
-                                        <label class="forget_pass_incorrect"></label>
-
-                                        <div class="clearfix">
-                                            <a class="btn ct-info-btn btn-lg ct-xs-12" href="javascript:void(0)" id="reset_pass">Send Mail</a>
-                                        </div>
-                                        <div class="clearfix">
-                                            <a class="btn btn-link ct-xs-12" id="ct_login_user" href="javascript:void(0)">Back to Login</a>
-                                        </div>
-
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+        
+    
     <script>
         var baseurlObj = {
             'base_url': '/cleanto',

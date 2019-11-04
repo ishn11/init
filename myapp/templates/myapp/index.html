@@ -68,7 +68,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 </div>
                               {% endfor %}
                             {% endif %}
-                    </div> -->
+                    </div>  -->
                     <nav class="main-menu">
                         <div class="navbar-header">    
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -370,7 +370,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <!-- <div class="container-fluid"> -->
                     <div class="row">
                         <div class="col-lg-5">
-                            <img src="drymaster/modal.jpg" alt="">
+                            <img src=" {% static  'myapp/drymaster/modal.jpg' %}" alt="">
                         </div>
                         <div class="col-lg-7">
                             <div class="modal-header text-center">
@@ -380,31 +380,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     </button>
                             </div>
                             <div class="modal-body mx-3">
-                                    <h2>Contact Us</h2>
+                                    <!-- <h2>Contact Us</h2>
                                     <form method="post">
                                         {% csrf_token %}
                                         {{ post_form.as_p }}
                                         <input type="submit" value="Submit" />
-                                    </form>
-                                <!-- <div class="md-form mb-5">
-                                    <input type="text" id="form34" placeholder="Please Enter Your Name:" class="form-control validate">
+                                    </form> -->
+                        <form method="post">
+                            {% csrf_token %}
+                                <div class="md-form mb-5">
+                                        {{ post_form.name }}
+                                    <!-- <input type="text" id="form34" placeholder="Please Enter Your Name:" class="form-control validate"> -->
                                 </div>
                                 <div class="md-form mb-5">
-                                    <input type="email" id="form29" class="form-control validate" placeholder="Please Enter Your Email Id:">
+                                        {{ post_form.phone_number }}
+                                        <!-- <input type="email" id="form29" class="form-control validate" placeholder="Please Enter Your Email Id:"> -->
                                 </div>
                                 <div class="md-form mb-5">
-                                    <input type="email" id="form29" class="form-control validate" placeholder="Please Enter Your Phone No:">
+                                        {{ post_form.email }} 
+                                        <!-- <input type="email" id="form29" class="form-control validate" placeholder="Please Enter Your Phone No:"> -->
                                 </div>
                                 <div class="md-form mb-5">
-                                    <input type="text" id="form32" class="form-control validate" placeholder="Suburb/Location:">
+                                        {{ post_form.location }}
+                                        <!-- <input type="text" id="form32" class="form-control validate" placeholder="Suburb/Location:"> -->
                                 </div>
                                 <div class="md-form">
-                                    <textarea type="text" id="form8" class="md-textarea form-control" rows="4" placeholder="Your message"></textarea>
-                                </div> -->
+                                        {{ post_form.description }}
+                                        <!-- <textarea type="text" id="form8" class="md-textarea form-control" rows="4" placeholder="Your message"></textarea> -->
+                                </div> 
                             </div>
-                            <div class="modal-footer d-flex justify-content-center">
-                                <button type="button" class="btn mymd-btn" data-dismiss="modal">Submit</button>
-                            </div>
+                            <input type="submit" value="Submit" />
+                            
+                        </form>  
                         </div>
                     </div>
                 <!-- </div> -->
@@ -1130,44 +1137,57 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="col-lg-6">
                         <div class="cs-contact-box">
                             <h2>GET A Free Quote</h2>
-                            <div class="small-line-2"></div>
+                            <!-- <div class="small-line-2"></div> -->
                             
-                                    <form method="post">
+                                    <!-- <form method="post">
                                         {% csrf_token %}
                                         {{ comment_form.as_p }}
                                         <input name="form_botcheck" class="form-control" type="hidden" value="">
                                 <button class="btn btn-default cs-my-btn" name="submit" type="submit" value="submit" data-loading-text="Please wait...">Send Us</button>
                                         
-                                    </form>
-                            
-                            <!-- <form id="contact_form" name="contact_form" action="mail.html" method="post">
+                                    </form> -->
+                    <form method="post">
+                                            
+                        {% csrf_token %}    
+                            <!-- <form id="contact_form" name="contact_form" action="mail.html" method="post"> -->
                               <div class="row">
                                 <div class="col-sm-6">
                                   <div class="form-group">
-                                    <input id="name" name="name" class="form-control" type="text" placeholder="Name *" required="">
+                                        {{ comment_form.name }}
+                                    <!-- <input id="name" name="name" class="form-control" type="text" placeholder="Name *" required=""> -->
                                   </div>
                                 </div>
                                 <div class="col-sm-6">
                                   <div class="form-group">
-                                    <input id="phone" name="phone" class="form-control" type="text" placeholder="Phone *">
+                                        {{ comment_form.phone_number }}
+                                    <!-- <input id="phone" name="phone" class="form-control" type="text" placeholder="Phone *"> -->
                                   </div>
                                 </div>
                               </div>                
                               <div class="row">
                                 <div class="col-sm-12">
                                   <div class="form-group">
-                                    <input id="email" name="email" class="form-control required" type="email" placeholder="Email *">
+                                        {{ comment_form.email }}
+                                    <!-- <input id="email" name="email" class="form-control required" type="email" placeholder="Email *"> -->
                                   </div>
                                 </div>
                               </div>
                               <div class="form-group">
-                                <textarea id="message" name="message" class="form-control required" rows="7" placeholder="Details Here *"></textarea>
+                                  
+                                    {{ comment_form.description }}
+                                    <!-- <textarea id="message" name="message" class="form-control required" rows="7" placeholder="Details Here *"></textarea> -->
                               </div>
-                              <div class="form-group cs-mar-0">
+                             
+                                    
+                              <!-- <div class="form-group cs-mar-0">
                                 <input name="form_botcheck" class="form-control" type="hidden" value="">
                                 <button class="btn btn-default cs-my-btn" name="submit" type="submit" value="submit" data-loading-text="Please wait...">Send Us</button>
-                              </div>
-                            </form> -->
+                              </div> -->
+                              <input name="form_botcheck" class="form-control" type="hidden" value="">
+                              <button class="btn btn-default cs-my-btn" name="submit" type="submit" value="submit" data-loading-text="Please wait...">Send Us</button>
+                                      
+                                  </form>
+                            
                         </div>
                     </div>
                     <div class="col-lg-6">

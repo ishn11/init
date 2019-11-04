@@ -665,19 +665,33 @@
             <div class="container">
                 <!-- left side main booking form -->
 
-                <div class="ct-main-left container">
-                    <div class="ct-sm-12 ct-md-12 ta-c ct-location-header">
-
-                        <div id="ct-logo">
-                            <a href="{% url 'index' %}">
-                                <img style="max-height: 300px; max-width: 300px;" src="{% static 'cleanto/assets/images/services/company_38045.jpg' %}" />
-                            </a>
+                <div class="ct-main-left ct-sm-10 ct-md-10 ct-xs-12 mt-30 br-5 np">
+                        <div class="ct-main-left container">
+                        <div class="ct-sm-12 ct-md-12 ta-c ct-location-header">
+    
+                            <div id="ct-logo">
+                                <a href="{% url 'index' %}">
+                                    <img style="max-height: 300px; max-width: 300px;" src="{% static 'cleanto/assets/images/services/company_38045.jpg' %}" />
+                                </a>
+                            </div>
+                            <h2 class="header2">Drymaster Carpet Cleaning</h2>
+    
+                            <h6 class="header6">USE CODE "DRY10" FOR 10% OFF. NOTE: Minimum spend is $105.00. Payment is on completion of job. 10% discount does not apply for account work.  <span class="ct-company-phone">
+                                                        </span>
+    
+                        </h6>
+    
+                            <a class="ct-link ct-mybookings" target="_blank" href="{% url 'order-summary' %}">My Bookings</a>
                         </div>
-                        <h2 class="header2">Drymaster Carpet Cleaning</h2>
-
-                        
-                        <a class="ct-link ct-mybookings" target="_blank" href="{% url 'order-summary' %}">My Bookings</a>
-                    </div>
+    
+                        <!-- end area based -->
+                        <!-- <div class="ct-list-services ct-common-box fl hide_allsss">
+                            <div class="ct-list-header">
+                                <h3 class="header3">Choose service                                              </h3>
+    
+                                <p class="ct-sub">Choose your service and property size</p>
+                                <label class="service_not_selected_error" id="service_not_selected_error"></label>
+                            </div> -->
 
                     <!-- end area based -->
                     <div class="ct-list-services ct-common-box fl hide_allsss">
@@ -710,13 +724,13 @@
                                 <!--Grid column-->
                                 <div class="col-md-6 mb-4">
                         
-                                        <img class="ct-image" src="{% static 'cleanto/assets/images/services/service_49493.png' %}" />
+                                        <img class="ct-image" src="{{ item.image.url }}" />
                         
                                 </div>
                                 <!--Grid column-->
                         
                                 <!--Grid column-->
-                                <div class="col-md-6 mb-4">
+                                <div class="col-md-6 offset-md-4">
                         
                                   <!--Content-->
                                   <div class="p-4">

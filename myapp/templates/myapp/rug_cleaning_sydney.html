@@ -66,306 +66,316 @@
 </head>
 
 <body>
-    <header class="main-header header-style-three bg-top page-top">
-        <!--Header-Lower-->
-        <div class="header-lower">
-            <div class="container">
-                <div class="nav-outer clearfix">
-                    <!--Logo-->
-                    <div class="logo">
-                        <a href="index.html"><img class="img-responsive" src="images/logo.png" alt="Dry Master Carpet Cleaning"></a>
+        <header class="main-header header-style-three bg-top page-top">
+                <!--Header-Lower-->
+                <div class="header-lower">
+                    <div class="container">
+                        <div class="nav-outer clearfix">
+                            <!--Logo-->
+                            <div class="logo">
+                                <a href="{% url 'index' %}"><img class="img-responsive" src="{% static 'myapp/images/logo.png' %}" alt="Dry Master Carpet Cleaning"></a>
+                            </div>
+                            <!-- <div class="col-md-8">
+                                    {% if messages %}
+                                      {% for message in messages %}
+                                        <div class="alert alert-{{ message.tags }}">
+                                          {{ message }}
+                                        </div>
+                                      {% endfor %}
+                                    {% endif %}
+                            </div>  -->
+                            <nav class="main-menu">
+                                <div class="navbar-header">    
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li><a href="{% url 'index' %}">Home</a></li>
+                                        <li class="dropdown"><a href="{% url 'about' %}">About Us</a>
+                                            <ul>
+                                                <li><a href="{% url 'faq' %}">FAQ</a></li>
+                                                <li><a href="{% url 'privacy_policy' %}">Privacy Policy</a>
+                                                </li>
+                                                <li><a href="{% url 'terms_and_conditions' %}">Terms & Conditions</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#">Service</a>
+                                            <ul>
+                                                <li><a href="{% url 'carpet_steam_cleaning' %}">Carpet Steam Cleaning</a></li>
+                                                <li><a href="{% url 'carpet_dry_clean' %}">Carpet Dry Cleaning</a></li>
+                                                <li><a href="{% url 'rug_cleaning' %}">Rug Cleaning</a></li>
+                                                <li class="dropdown"><a href="#">Upholstery</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'leather_sofa_leaning' %}" >Leather Sofa Cleaning</a></li>
+                                                        <li><a href="{% url 'leather_sofa_leaning' %}">Leather Sofa Cleaning</a></li>
+                                                        <li><a href="{% url 'fabric_sofa_cleaning' %}" >Fabric Sofa Cleaning</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="{% url 'water_damage' %}" >Water Damage</a></li>
+                                                <li><a href="{% url 'tile_and_grout_cleaning' %}">Tile &#038; Grout</a></li>
+                                                <li class="dropdown"><a href="#">Stains &#038; Spots</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'anti_allergen_cleaning' %}">Anti Allergen Cleaning</a></li>
+                                                        <li><a href="{% url 'filtration_soiling' %}"  >Filtration Soiling</a></li>
+                                                        <li><a href="{% url 'pet_stains_treatments' %}">Pet Stains &#038; Treatments</a></li>
+                                                        <li><a href="{% url 'heavy_soiled_carpets' %}"  >Heavy Soiled Carpets</a></li>
+                                                        <li><a href="{% url 'cleaning_agents' %}">Cleaning Agents</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="{% url 'mattress_cleaning' %}">Mattress</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#">Service Location</a>
+                                            <ul>
+                                                <li class="dropdown"><a href="{% url 'newcastle' %}">Newcastle</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'carpet_cleaning_newcastle' %}">Carpet Cleaning Newcastle</a></li>
+                                                        <li><a href="{% url 'mattress_cleaning_newcastle' %}">Mattress Cleaning Newcastle</a></li>
+                                                        <li><a href="{% url 'rug_cleaning_newcastle' %}">Rug Cleaning Newcastle</a></li>
+                                                        <li><a href="{% url 'water_damage_newcastle' %}">Water Damage Newcastle</a></li>
+                                                    </ul>
+                                                </li>
+        
+                                                <li class="dropdown"><a href="{% url 'goldcoast' %}">Gold Coast</a>
+                                                    <ul>
+                                                       
+                                                        <li><a href="{% url 'rug_cleaning_gold_coast' %}">Rug Cleaning Gold Coast</a></li>
+                                                        <li><a href="{% url 'sofa_cleaning_gold_coast' %}">Sofa Cleaning Gold Coast</a></li>
+                                                        <li><a href="{% url 'mattress_cleaning_gold_coast' %}">Mattress Cleaning Gold Coast</a></li>
+                                                        <li><a href="{% url 'water_damage_gold_coast' %}">Water Damage Gold Coast</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown"><a href="{% url 'wollongong' %}">Wollongong</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'carpet_cleaning_wollongong' %}">Carpet Cleaning Wollongong</a></li>
+                                                        <li><a href="{% url 'mattress_cleaning_wollongong' %}">Mattress Cleaning Wollongong</a></li>
+                                                        <li><a href="{% url 'rug_cleaning_wollongong' %}">Rug Cleaning Wollongong</a></li>
+                                                        <li><a href="{% url 'water_damage_wollongong' %}">Water Damage Wollongong</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown"><a href="{% url 'canberra' %}">Canberra</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'carpet_cleaning_canberra' %}">Carpet Cleaning Canberra</a></li>
+                                                        <li><a href="{% url 'mattress_cleaning_canberra' %}">Mattress Cleaning Canberra</a></li>
+                                                        <li><a href="{% url 'rug_cleaning_canberra' %}">Rug Cleaning Canberra</a></li>
+                                                        <li><a href="{% url 'water_damage_canberra' %}">Water Damage Canberra</a></li>
+                                                    </ul>
+                                                </li>
+        
+                                                <li class="dropdown"><a href="{% url 'sydney' %}">Sydney</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'carpet_cleaning_sydney' %}">Carpet Cleaning Sydney</a></li>
+                                                        <li><a href="{% url 'mattress_cleaning_sydney' %}">Mattress Cleaning Sydney</a></li>
+                                                        <li><a href="{% url 'rug_cleaning_sydney' %}">Rug Cleaning Sydney</a></li>
+                                                        <li><a href="{% url 'water_damage_sydney' %}">Water Damage Sydney</a></li>
+                                                    </ul>
+                                                </li>
+        
+                                                <li><a href="{% url 'perth' %}">Perth</a></li>
+        
+                                                <li class="dropdown"><a href="{% url 'melbourne' %}">Melbourne</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'carpet_cleaning_melbourne' %}">Carpet Cleaning Melbourne</a></li>
+                                                        <li><a href="{% url 'upholstery_cleaning_melbourne' %}">Upholstery Cleaning Melbourne</a></li>
+                                                        <li><a href="{% url 'mattress_cleaning_melbourne' %}">Mattress Cleaning Melbourne</a></li>
+                                                        <li><a href="{% url 'rug_cleaning_melbourne' %}">Rug Cleaning Melbourne</a></li>
+                                                        <li><a href="{% url 'water_damage_melbourne' %}">Water Damage Melbourne</a></li>
+                                                    </ul>
+                                                </li>
+        
+                                                <li class="dropdown"><a href="{% url 'brisbane' %}">Brisbane</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'carpet_cleaning_brisbane' %}">Carpet Cleaning Brisbane</a></li>
+                                                        <li><a href="{% url 'mattress_cleaning_brisbane' %}">Mattress Cleaning Brisbane</a></li>
+                                                        <li><a href="{% url 'sofa_cleaning_brisbane' %}">Sofa Cleaning Brisbane</a></li>
+                                                        <li><a href="{% url 'rug_cleaning_brisbane' %}">Rug Cleaning Brisbane</a></li>
+                                                        <li><a href="{% url 'water_damage_brisbane' %}">Water Damage Brisbane</a></li>
+                                                    </ul>
+                                                </li>
+        
+                                                <li class="dropdown"><a href="{% url 'adelaide' %}">Adelaide</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'carpet_cleaning_adelaide' %}">Carpet Cleaning Adelaide</a></li>
+                                                        <li><a href="{% url 'mattress_cleaning_adelaide' %}">Mattress Cleaning Adelaide</a></li>
+                                                        <li><a href="{% url 'rug_cleaning_adelaide' %}">Rug Cleaning Adelaide</a></li>
+                                                        <li><a href="{% url 'water_damage_adelaide' %}">Water Damage Adelaide</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'accreditations' %}">Accreditations</a></li>
+                                        <li><a href="{% url 'home' %}">Instant Quote</a></li>
+                                        <li><a href="#exampleModal" data-toggle="modal" data-target="#exampleModal">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <div class="shop-box">
+                                <a href="https://www.facebook.com/pages/Drymaster-Carpet-Cleaning/561031333936630" target="_blank"><i class="fa fa-facebook-f ab14"></i></a>
+                                <a href="https://twitter.com/drymastercc" target="_blank"><i class="fa fa-twitter ab14"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <nav class="main-menu">
-                        <div class="navbar-header">    
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            </button>
+                </div>
+                <!--Bounce In Header-->
+                <div class="bounce-in-header hidden-xs">
+                    <div class="container clearfix">
+                        <div class="logo pull-left">
+                            <a href="{% url 'index' %}" class="img-responsive"><img src="{% static 'myapp/images/logo.png' %}" alt="All Bright Carpet & Upholstery Cleaning Specialists"></a>
                         </div>
-                        <div class="navbar-collapse collapse clearfix">
-                            <ul class="navigation clearfix">
-                                <li><a href="index.html">Home</a></li>
-                                <li class="dropdown"><a href="about.html">About Us</a>
-                                    <ul>
-                                        <li><a href="faq.html">FAQ</a></li>
-                                        <li><a href="privacy_policy.html">Privacy Policy</a>
+                        <div class="pull-right">
+                            <!-- Main Menu -->
+                            <nav class="main-menu">
+                                <div class="navbar-header">
+                                    <!-- Toggle Button -->      
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li class="current dropdown"><a href="index.html">Home</a></li>
+                                        <li class="dropdown"><a href="{% url 'about' %}">About Us</a>
+                                            <ul>
+                                                <li><a href="{% url 'faq' %}">FAQ</a></li>
+                                                <li><a href="{% url 'privacy_policy' %}">Privacy Policy</a>
+                                                </li>
+                                                <li><a href="{% url 'terms_and_conditions' %}">Terms & Conditions</a>
+                                                </li>
+                                            </ul>
+        
                                         </li>
-                                        <li><a href="terms_and_conditions.html">Terms & Conditions</a>
+        
+                                        <li class="dropdown"><a href="#">Service</a>
+                                            <ul>
+                                                <li><a href="{% url 'carpet_steam_cleaning' %}">Carpet Steam Cleaning</a></li>
+                                                <li><a href="{% url 'carpet_dry_cleanl' 5}">Carpet Dry Cleaning</a></li>
+                                                <li><a href="{% url 'rug_cleaning' %}">Rug Cleaning</a></li>
+                                                <li class="dropdown"><a href="#">Upholstery</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'leather_sofa_leaning' %}">Leather Sofa Cleaning</a></li>
+                                                        <li><a href="{% url 'fabric_sofa_cleaning' %}">Fabric Sofa Cleaning</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="{% url 'water_damage' %}">Water Damage</a></li>
+                                                <li><a href="{% url 'tile_and_grout_cleaning' %}">Tile &#038; Grout</a></li>
+                                                <li class="dropdown"><a href="#">Stains &#038; Spots</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'anti_allergen_cleaning' %}">Anti Allergen Cleaning</a></li>
+                                                        <li><a href="{% url 'filtration_soiling' %}">Filtration Soiling</a></li>
+                                                        <li><a href="{% url 'pet_stains_treatments' %}">Pet Stains &#038; Treatments</a></li>
+                                                        <li><a href="{% url 'heavy_soiled_carpets' %}">Heavy Soiled Carpets</a></li>
+                                                        <li><a href="{% url 'cleaning_agents' %}">Cleaning Agents</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="{% url 'mattress_cleaning' %}">Mattress</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#">Service Location</a>
+                                            <ul>
+                                                <li class="dropdown"><a href="{% url 'newcastle' %}">Newcastle</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'carpet_cleaning_newcastle' %}">Carpet Cleaning Newcastle</a></li>
+                                                        <li><a href="{% url 'mattress_cleaning_newcastle' %}">Mattress Cleaning Newcastle</a></li>
+                                                        <li><a href="{% url 'rug_cleaning_newcastle' %}">Rug Cleaning Newcastle</a></li>
+                                                        <li><a href="{% url 'water_damage_newcastle' %}">Water Damage Newcastle</a></li>
+                                                    </ul>
+                                                </li>
+        
+                                                <li class="dropdown"><a href="{% url 'goldcoast' %}">Gold Coast</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'tile_cleaning_gold_coast' %}">Professional Tile Cleaning Gold Coast</a></li>
+                                                        <li><a href="{% url 'rug_cleaning_gold_coast' %}">Rug Cleaning Gold Coast</a></li>
+                                                        <li><a href="{% url 'sofa_cleaning_gold_coast' %}">Sofa Cleaning Gold Coast</a></li>
+                                                        <li><a href="{% url 'mattress_cleaning_gold_coast' %}">Mattress Cleaning Gold Coast</a></li>
+                                                        <li><a href="{% url 'water_damage_gold_coast' %}">Water Damage Gold Coast</a></li>
+                                                    </ul>
+                                                </li>
+        
+                                                <li class="dropdown"><a href="{% url 'wollongong' %}">Wollongong</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'carpet_cleaning_wollongong' %}">Carpet Cleaning Wollongong</a></li>
+                                                        <li><a href="{% url 'mattress_cleaning_wollongong' %}">Mattress Cleaning Wollongong</a></li>
+                                                        <li><a href="{% url 'rug_cleaning_wollongong' %}">Rug Cleaning Wollongong</a></li>
+                                                        <li><a href="{% url 'water_damage_wollongong' %}">Water Damage Wollongong</a></li>
+                                                    </ul>
+                                                </li>
+        
+                                                <li class="dropdown"><a href="{% url 'canberra' %}">Canberra</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'carpet_cleaning_canberra' %}">Carpet Cleaning Canberra</a></li>
+                                                        <li><a href="{% url 'mattress_cleaning_canberra' %}">Mattress Cleaning Canberra</a></li>
+                                                        <li><a href="{% url 'rug_cleaning_canberra' %}">Rug Cleaning Canberra</a></li>
+                                                        <li><a href="{% url 'water_damage_canberra' %}">Water Damage Canberra</a></li>
+                                                    </ul>
+                                                </li>
+        
+                                                <li class="dropdown"><a href="{% url 'sydney' %}">Sydney</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'carpet_cleaning_sydney' %}">Carpet Cleaning Sydney</a></li>
+                                                        <li><a href="{% url 'mattress_cleaning_sydney' %}">Mattress Cleaning Sydney</a></li>
+                                                        <li><a href="{% url 'rug_cleaning_sydney' %}">Rug Cleaning Sydney</a></li>
+                                                        <li><a href="{% url 'water_damage_sydney' %}">Water Damage Sydney</a></li>
+                                                    </ul>
+                                                </li>
+        
+                                                <li><a href="{% url 'perth' %}">Perth</a></li>
+        
+                                                <li class="dropdown"><a href="{% url 'melbourne' %}">Melbourne</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'carpet_cleaning_melbourne' %}">Carpet Cleaning Melbourne</a></li>
+                                                        <li><a href="{% url 'upholstery_cleaning_melbourne' %}">Upholstery Cleaning Melbourne</a></li>
+                                                        <li><a href="{% url 'mattress_cleaning_melbourne' %}">Mattress Cleaning Melbourne</a></li>
+                                                        <li><a href="{% url 'rug_cleaning_melbourne' %}">Rug Cleaning Melbourne</a></li>
+                                                        <li><a href="{% url 'water_damage_melbourne' %}">Water Damage Melbourne</a></li>
+                                                    </ul>
+                                                </li>
+        
+                                                <li class="dropdown"><a href="{% url 'brisbane' %}">Brisbane</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'carpet_cleaning_brisbane' %}">Carpet Cleaning Brisbane</a></li>
+                                                        <li><a href="{% url 'mattress_cleaning_brisbane' %}">Mattress Cleaning Brisbane</a></li>
+                                                        <li><a href="{% url 'sofa_cleaning_brisbane' %}">Sofa Cleaning Brisbane</a></li>
+                                                        <li><a href="{% url 'rug_cleaning_brisbane' %}">Rug Cleaning Brisbane</a></li>
+                                                        <li><a href="{% url 'water_damage_brisbane' %}">Water Damage Brisbane</a></li>
+                                                    </ul>
+                                                </li>
+        
+                                                <li class="dropdown"><a href="{% url 'adelaide' %}">Adelaide</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'carpet_cleaning_adelaide' %}">Carpet Cleaning Adelaide</a></li>
+                                                        <li><a href="{% url 'mattress_cleaning_adelaide' %}">Mattress Cleaning Adelaide</a></li>
+                                                        <li><a href="{% url 'rug_cleaning_adelaide' %}">Rug Cleaning Adelaide</a></li>
+                                                        <li><a href="{% url 'water_damage_adelaide' %}">Water Damage Adelaide</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+        
+                                        </li>
+                                        <li><a href="{% url 'accreditations' %}">Accreditations</a></li>
+                                        <li><a href="{% url 'inde' %}">Instant Quote</a></li>
+                                        <li><a data-toggle="modal" data-target="#exampleModal" href="#exampleModal">Contact Us</a></li><li>
+                                            <div class="shop-box ab15">
+                                                <a href="https://www.facebook.com/pages/Drymaster-Carpet-Cleaning/561031333936630" target="_blank">
+                                                    <i class="fa fa-facebook-f ab14"></i>
+                                                </a>
+                                                <a href="https://twitter.com/drymastercc" target="_blank">
+                                                    <i class="fa fa-twitter ab14"></i>
+                                                </a>
+                                            </div>
                                         </li>
                                     </ul>
-                                </li>
-                                <li class="dropdown"><a href="#">Service</a>
-                                    <ul>
-                                        <li><a href="carpet_steam_cleaning.html">Carpet Steam Cleaning</a></li>
-                                        <li><a href="carpet_dry_clean.html">Carpet Dry Cleaning</a></li>
-                                        <li><a href="rug_cleaning.html">Rug Cleaning</a></li>
-                                        <li class="dropdown"><a href="#">Upholstery</a>
-                                            <ul>
-                                                <li><a href="leather_sofa_leaning.html">Leather Sofa Cleaning</a></li>
-                                                <li><a href="fabric_sofa_cleaning.html">Fabric Sofa Cleaning</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="water_damage.html">Water Damage</a></li>
-                                        <li><a href="tile_and_grout_cleaning.html">Tile &#038; Grout</a></li>
-                                        <li class="dropdown"><a href="#">Stains &#038; Spots</a>
-                                            <ul>
-                                                <li><a href="anti_allergen_cleaning.html">Anti Allergen Cleaning</a></li>
-                                                <li><a href="filtration_soiling.html">Filtration Soiling</a></li>
-                                                <li><a href="pet_stains_treatments.html">Pet Stains &#038; Treatments</a></li>
-                                                <li><a href="heavy_soiled_carpets.html">Heavy Soiled Carpets</a></li>
-                                                <li><a href="cleaning_agents.html">Cleaning Agents</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="mattress_cleaning.html">Mattress</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="#">Service Location</a>
-                                    <ul>
-                                        <li class="dropdown"><a href="newcastle.html">Newcastle</a>
-                                            <ul>
-                                                <li><a href="carpet_cleaning_newcastle.html">Carpet Cleaning Newcastle</a></li>
-                                                <li><a href="mattress_cleaning_newcastle.html">Mattress Cleaning Newcastle</a></li>
-                                                <li><a href="rug_cleaning_newcastle.html">Rug Cleaning Newcastle</a></li>
-                                                <li><a href="water_damage_newcastle.html">Water Damage Newcastle</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="dropdown"><a href="goldcoast.html">Gold Coast</a>
-                                            <ul>
-                                                <li><a href="tile_cleaning_gold_coast.html">Professional Tile Cleaning Gold Coast</a></li>
-                                                <li><a href="rug_cleaning_gold_coast.html">Rug Cleaning Gold Coast</a></li>
-                                                <li><a href="sofa_cleaning_gold_coast.html">Sofa Cleaning Gold Coast</a></li>
-                                                <li><a href="mattress_cleaning_gold_coast.html">Mattress Cleaning Gold Coast</a></li>
-                                                <li><a href="water_damage_gold_coast.html">Water Damage Gold Coast</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown"><a href="wollongong.html">Wollongong</a>
-                                            <ul>
-                                                <li><a href="carpet_cleaning_wollongong.html">Carpet Cleaning Wollongong</a></li>
-                                                <li><a href="mattress_cleaning_wollongong.html">Mattress Cleaning Wollongong</a></li>
-                                                <li><a href="rug_cleaning_wollongong.html">Rug Cleaning Wollongong</a></li>
-                                                <li><a href="water_damage_wollongong.html">Water Damage Wollongong</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown"><a href="canberra.html">Canberra</a>
-                                            <ul>
-                                                <li><a href="carpet_cleaning_canberra.html">Carpet Cleaning Canberra</a></li>
-                                                <li><a href="mattress_cleaning_canberra.html">Mattress Cleaning Canberra</a></li>
-                                                <li><a href="rug_cleaning_canberra.html">Rug Cleaning Canberra</a></li>
-                                                <li><a href="water_damage_canberra.html">Water Damage Canberra</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="dropdown"><a href="sydney.html">Sydney</a>
-                                            <ul>
-                                                <li><a href="carpet_cleaning_sydney.html">Carpet Cleaning Sydney</a></li>
-                                                <li><a href="mattress_cleaning_sydney.html">Mattress Cleaning Sydney</a></li>
-                                                <li><a href="rug_cleaning_sydney.html">Rug Cleaning Sydney</a></li>
-                                                <li><a href="water_damage_sydney.html">Water Damage Sydney</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li><a href="perth.html">Perth</a></li>
-
-                                        <li class="dropdown"><a href="melbourne.html">Melbourne</a>
-                                            <ul>
-                                                <li><a href="carpet_cleaning_melbourne.html">Carpet Cleaning Melbourne</a></li>
-                                                <li><a href="upholstery_cleaning_melbourne.html">Upholstery Cleaning Melbourne</a></li>
-                                                <li><a href="mattress_cleaning_melbourne.html">Mattress Cleaning Melbourne</a></li>
-                                                <li><a href="rug_cleaning_melbourne.html">Rug Cleaning Melbourne</a></li>
-                                                <li><a href="water_damage_melbourne.html">Water Damage Melbourne</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="dropdown"><a href="brisbane.html">Brisbane</a>
-                                            <ul>
-                                                <li><a href="carpet_cleaning_brisbane.html">Carpet Cleaning Brisbane</a></li>
-                                                <li><a href="mattress_cleaning_brisbane.html">Mattress Cleaning Brisbane</a></li>
-                                                <li><a href="sofa_cleaning_brisbane.html">Sofa Cleaning Brisbane</a></li>
-                                                <li><a href="rug_cleaning_brisbane.html">Rug Cleaning Brisbane</a></li>
-                                                <li><a href="water_damage_brisbane.html">Water Damage Brisbane</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="dropdown"><a href="adelaide.html">Adelaide</a>
-                                            <ul>
-                                                <li><a href="carpet_cleaning_adelaide.html">Carpet Cleaning Adelaide</a></li>
-                                                <li><a href="mattress_cleaning_adelaide.html">Mattress Cleaning Adelaide</a></li>
-                                                <li><a href="rug_cleaning_adelaide.html">Rug Cleaning Adelaide</a></li>
-                                                <li><a href="water_damage_adelaide.html">Water Damage Adelaide</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="accreditations.html">Accreditations</a></li>
-                                <li><a href="cleanto/index.html">Instant Quote</a></li>
-                                <li><a href="#exampleModal" data-toggle="modal" data-target="#exampleModal">Contact Us</a></li>
-                            </ul>
+                                </div>
+                            </nav>
                         </div>
-                    </nav>
-                    <div class="shop-box">
-                        <a href="https://www.facebook.com/pages/Drymaster-Carpet-Cleaning/561031333936630" target="_blank"><i class="fa fa-facebook-f ab14"></i></a>
-                        <a href="https://twitter.com/drymastercc" target="_blank"><i class="fa fa-twitter ab14"></i></a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!--Bounce In Header-->
-        <div class="bounce-in-header hidden-xs">
-            <div class="container clearfix">
-                <div class="logo pull-left">
-                    <a href="index.html" class="img-responsive"><img src="images/logo.png" alt="All Bright Carpet & Upholstery Cleaning Specialists"></a>
-                </div>
-                <div class="pull-right">
-                    <!-- Main Menu -->
-                    <nav class="main-menu">
-                        <div class="navbar-header">
-                            <!-- Toggle Button -->      
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div class="navbar-collapse collapse clearfix">
-                            <ul class="navigation clearfix">
-                                <li class="current dropdown"><a href="index.html">Home</a></li>
-                                <li class="dropdown"><a href="about.html">About Us</a>
-                                    <ul>
-                                        <li><a href="faq.html">FAQ</a></li>
-                                        <li><a href="privacy_policy.html">Privacy Policy</a>
-                                        </li>
-                                        <li><a href="terms_and_conditions.html">Terms & Conditions</a>
-                                        </li>
-                                    </ul>
-
-                                </li>
-
-                                <li class="dropdown"><a href="#">Service</a>
-                                    <ul>
-                                        <li><a href="carpet_steam_cleaning.html">Carpet Steam Cleaning</a></li>
-                                        <li><a href="carpet_dry_clean.html">Carpet Dry Cleaning</a></li>
-                                        <li><a href="rug_cleaning.html">Rug Cleaning</a></li>
-                                        <li class="dropdown"><a href="#">Upholstery</a>
-                                            <ul>
-                                                <li><a href="leather_sofa_leaning.html">Leather Sofa Cleaning</a></li>
-                                                <li><a href="fabric_sofa_cleaning.html">Fabric Sofa Cleaning</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="water_damage.html">Water Damage</a></li>
-                                        <li><a href="tile_and_grout_cleaning.html">Tile &#038; Grout</a></li>
-                                        <li class="dropdown"><a href="#">Stains &#038; Spots</a>
-                                            <ul>
-                                                <li><a href="anti_allergen_cleaning.html">Anti Allergen Cleaning</a></li>
-                                                <li><a href="filtration_soiling.html">Filtration Soiling</a></li>
-                                                <li><a href="pet_stains_treatments.html">Pet Stains &#038; Treatments</a></li>
-                                                <li><a href="heavy_soiled_carpets.html">Heavy Soiled Carpets</a></li>
-                                                <li><a href="cleaning_agents.html">Cleaning Agents</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="mattress_cleaning.html">Mattress</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="#">Service Location</a>
-                                    <ul>
-                                        <li class="dropdown"><a href="newcastle.html">Newcastle</a>
-                                            <ul>
-                                                <li><a href="carpet_cleaning_newcastle.html">Carpet Cleaning Newcastle</a></li>
-                                                <li><a href="mattress_cleaning_newcastle.html">Mattress Cleaning Newcastle</a></li>
-                                                <li><a href="rug_cleaning_newcastle.html">Rug Cleaning Newcastle</a></li>
-                                                <li><a href="water_damage_newcastle.html">Water Damage Newcastle</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="dropdown"><a href="goldcoast.html">Gold Coast</a>
-                                            <ul>
-                                                <li><a href="tile_cleaning_gold_coast.html">Professional Tile Cleaning Gold Coast</a></li>
-                                                <li><a href="rug_cleaning_gold_coast.html">Rug Cleaning Gold Coast</a></li>
-                                                <li><a href="sofa_cleaning_gold_coast.html">Sofa Cleaning Gold Coast</a></li>
-                                                <li><a href="mattress_cleaning_gold_coast.html">Mattress Cleaning Gold Coast</a></li>
-                                                <li><a href="water_damage_gold_coast.html">Water Damage Gold Coast</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="dropdown"><a href="wollongong.html">Wollongong</a>
-                                            <ul>
-                                                <li><a href="carpet_cleaning_wollongong.html">Carpet Cleaning Wollongong</a></li>
-                                                <li><a href="mattress_cleaning_wollongong.html">Mattress Cleaning Wollongong</a></li>
-                                                <li><a href="rug_cleaning_wollongong.html">Rug Cleaning Wollongong</a></li>
-                                                <li><a href="water_damage_wollongong.html">Water Damage Wollongong</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="dropdown"><a href="canberra.html">Canberra</a>
-                                            <ul>
-                                                <li><a href="carpet_cleaning_canberra.html">Carpet Cleaning Canberra</a></li>
-                                                <li><a href="mattress_cleaning_canberra.html">Mattress Cleaning Canberra</a></li>
-                                                <li><a href="rug_cleaning_canberra.html">Rug Cleaning Canberra</a></li>
-                                                <li><a href="water_damage_canberra.html">Water Damage Canberra</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="dropdown"><a href="sydney.html">Sydney</a>
-                                            <ul>
-                                                <li><a href="carpet_cleaning_sydney.html">Carpet Cleaning Sydney</a></li>
-                                                <li><a href="mattress_cleaning_sydney.html">Mattress Cleaning Sydney</a></li>
-                                                <li><a href="rug_cleaning_sydney.html">Rug Cleaning Sydney</a></li>
-                                                <li><a href="water_damage_sydney.html">Water Damage Sydney</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li><a href="perth.html">Perth</a></li>
-
-                                        <li class="dropdown"><a href="melbourne.html">Melbourne</a>
-                                            <ul>
-                                                <li><a href="carpet_cleaning_melbourne.html">Carpet Cleaning Melbourne</a></li>
-                                                <li><a href="upholstery_cleaning_melbourne.html">Upholstery Cleaning Melbourne</a></li>
-                                                <li><a href="mattress_cleaning_melbourne.html">Mattress Cleaning Melbourne</a></li>
-                                                <li><a href="rug_cleaning_melbourne.html">Rug Cleaning Melbourne</a></li>
-                                                <li><a href="water_damage_melbourne.html">Water Damage Melbourne</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="dropdown"><a href="brisbane.html">Brisbane</a>
-                                            <ul>
-                                                <li><a href="carpet_cleaning_brisbane.html">Carpet Cleaning Brisbane</a></li>
-                                                <li><a href="mattress_cleaning_brisbane.html">Mattress Cleaning Brisbane</a></li>
-                                                <li><a href="sofa_cleaning_brisbane.html">Sofa Cleaning Brisbane</a></li>
-                                                <li><a href="rug_cleaning_brisbane.html">Rug Cleaning Brisbane</a></li>
-                                                <li><a href="water_damage_brisbane.html">Water Damage Brisbane</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="dropdown"><a href="adelaide.html">Adelaide</a>
-                                            <ul>
-                                                <li><a href="carpet_cleaning_adelaide.html">Carpet Cleaning Adelaide</a></li>
-                                                <li><a href="mattress_cleaning_adelaide.html">Mattress Cleaning Adelaide</a></li>
-                                                <li><a href="rug_cleaning_adelaide.html">Rug Cleaning Adelaide</a></li>
-                                                <li><a href="water_damage_adelaide.html">Water Damage Adelaide</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-
-                                </li>
-                                <li><a href="accreditations.html">Accreditations</a></li>
-                                <li><a href="cleanto/index.html">Instant Quote</a></li>
-                                <li><a data-toggle="modal" data-target="#exampleModal" href="#exampleModal">Contact Us</a></li><li>
-                                    <div class="shop-box ab15">
-                                        <a href="https://www.facebook.com/pages/Drymaster-Carpet-Cleaning/561031333936630" target="_blank">
-                                            <i class="fa fa-facebook-f ab14"></i>
-                                        </a>
-                                        <a href="https://twitter.com/drymastercc" target="_blank">
-                                            <i class="fa fa-twitter ab14"></i>
-                                        </a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
     </header>
     
     <!-- Main Header end -->
